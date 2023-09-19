@@ -26,3 +26,7 @@ Para construir el proyecto `ng build` to build the project. Se almacenarán en l
 ```
  ng new Tweempus --prefix tweempus
 ```
+* Crear módulos
+ ```
+ ng g m core
+ ```
