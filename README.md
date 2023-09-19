@@ -36,11 +36,6 @@ Para construir el proyecto `ng build` to build the project. Se almacenarán en l
 ```
 ng generate environments
 ```
-
-
-
-
-
  ng g c header --skip-tests
 ```
 
