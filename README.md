@@ -39,9 +39,9 @@ Para construir el proyecto `ng build` to build the project. Se almacenarán en l
 ng generate environments
 ```
 * Generar un modulo con un componente sin archivo de pruebas y en la carpeta que estamos
-  ```
-  ng g c dashboard --skip-tests --flat
-  ```
+```
+ ng g c dashboard --skip-tests --flat
+```
 
 
 
