@@ -18,8 +18,11 @@ Para construir el proyecto `ng build` to build the project. Se almacenarán en l
 ## 🎱 URL Importantes
 ### Diseño 👉 :  [Bootstrap](https://getbootstrap.com/) 
 ### Hosting GitHub 👉  : [AngularComponentBasic](https://cintutudev.github.io/AngularComponentBasic) 
-### GIFS  👉 : [GIPHY](https://developers.giphy.com/) 
-### Loaders  👉 : [SVG](https://samherbert.net/svg-loaders/)
-### Animaciones  👉 : [Animate](https://animate.style/)
+### Flexbox  👉 : [Conceptos básicos](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
 
 ## 🎮Comandos
+* Crear proyecto con prefijo para especificar todos los componentes que se van ha crear
+
+```
+ ng new Tweempus --prefix tweempus
+```
