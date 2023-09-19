@@ -21,7 +21,7 @@ Para construir el proyecto `ng build` to build the project. Se almacenarán en l
 ### Flexbox  👉 : [Conceptos básicos](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
 
 ## 🎮Comandos
-* Crear proyecto con prefijo para especificar todos los componentes que se van ha crear
+* Crear proyecto con prefijo para especificar todos los componentes que se van ha crear Ej(<tweempus-root></tweempus-root>):
 
 ```
  ng new Tweempus --prefix tweempus
