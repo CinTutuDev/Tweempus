@@ -32,6 +32,15 @@ Para construir el proyecto `ng build` to build the project. Se almacenarán en l
  ```
 * Crear componentes sin archivo de prueba
 ```
+* Crear enviroments
+```
+ng generate environments
+```
+
+
+
+
+
  ng g c header --skip-tests
 ```
 
