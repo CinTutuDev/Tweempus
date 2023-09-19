@@ -42,7 +42,10 @@ ng generate environments
 ```
  ng g c dashboard --skip-tests --flat
 ```
-
+* Generar componente sin archivo de prueba ni hoja de estilo
+```
+ng g c contador --skip-tests --style none
+```
 
 
 
