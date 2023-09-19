@@ -1,12 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-
+import { TwimpCardComponent } from './twimp/twimp-card/twimp-card.component';
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule
-  ]
+  declarations: [TwimpCardComponent],
+  imports: [CommonModule],
+  exports: [TwimpCardComponent],
 })
-export class SharedModule { }
+export class SharedModule {}
