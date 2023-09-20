@@ -46,6 +46,9 @@ ng generate environments
 ```
 ng g c contador --skip-tests --style none
 ```
-
+* Generar clase modelo sin archivo de prueba
+```
+ng g class twimp.model --skip-tests
+```
 
 
