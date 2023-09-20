@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'tweempus-twimp-card',
   templateUrl: './twimp-card.component.html',
-  styleUrls: ['./twimp-card.component.css']
+  styleUrls: ['./twimp-card.component.css'],
 })
 export class TwimpCardComponent {
-
+  @Input() timp!: any;
 }
