@@ -5,7 +5,7 @@
  # <p align="center"> Proyecto realizado con ![angular](https://user-images.githubusercontent.com/71487857/212993270-3cf1454e-f0d7-4164-bc01-20d5fe6469cd.png)Angular16</p> 
 
 ## 🐦 Sitio Web
-### Hosting URL:  [TutuGifs](https://tutu-gifs.netlify.app/) 
+### Hosting URL: 
 
 ## 🏍 Servidor
 
@@ -42,7 +42,13 @@ ng generate environments
 ```
  ng g c dashboard --skip-tests --flat
 ```
-
-
+* Generar componente sin archivo de prueba ni hoja de estilo
+```
+ng g c contador --skip-tests --style none
+```
+* Generar clase modelo sin archivo de prueba
+```
+ng g class twimp.model --skip-tests
+```
 
 
