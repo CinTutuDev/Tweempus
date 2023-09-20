@@ -1,6 +1,7 @@
 <section class="twimp_list">
-  <tweempus-twimp-card></tweempus-twimp-card>
-  <tweempus-twimp-card></tweempus-twimp-card>
-  <tweempus-twimp-card></tweempus-twimp-card>
-  <tweempus-twimp-card></tweempus-twimp-card>
+  <!-- El twimp es de twimp-card.component.ts hijo y se le pasa array del padre twimp-list.component.ts-->
+  <tweempus-twimp-card [twimp]="twimps[0]"></tweempus-twimp-card>
+  <tweempus-twimp-card [twimp]="twimps[1]"></tweempus-twimp-card>
+  <tweempus-twimp-card [twimp]="twimps[2]"></tweempus-twimp-card>
+  <tweempus-twimp-card [twimp]="twimps[3]"></tweempus-twimp-card>
 </section>

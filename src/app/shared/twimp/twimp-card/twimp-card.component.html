@@ -2,19 +2,17 @@
   <div class="twimp_header">
     <img
       class="twimp_header_img"
-      src="assets/images/google-icon.png"
+      [src]="twimp.author.image"
       alt="Imagen de un twimp"
     />
-    <a class="twimp_header_name" href="www.therewego.com" target="_b"
-      >by David</a
+    <a class="twimp_header_name" [href]="twimp.author.url" target="_b"
+      >by{{ twimp.author.fullName }}</a
     >
-    <div class="twimp_header_date">Published on 01/01/2023</div>
+    <div class="twimp_header_date">Published on {{ twimp.timestamp }}</div>
   </div>
 
   <div class="twimp_content">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam efficitur
-    sodales libero, sit amet posuere arcu consectetur ut. Nam volutpat ligula ac
-    nunc consectetur vestibulum.
+    {{ twimp.content }}
   </div>
 
   <hr class="twimp_line" />
