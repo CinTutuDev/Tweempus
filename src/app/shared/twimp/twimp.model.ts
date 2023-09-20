@@ -13,14 +13,15 @@ export class TwimpModel {
     url: string,
     author: AuthorModel,
     content: string,
-    timestamp: string
+    timestamp: string,
+    favorite: boolean = false
   ) {
     this._id = id;
     this._url = url;
     this._author = author;
     this._content = content;
     this._timestamp = timestamp;
-    this._favorite = false;
+    this._favorite = favorite;
   }
 
   get id(): string {
