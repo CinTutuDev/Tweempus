@@ -54,4 +54,12 @@ ng g class twimp.model --skip-tests
 ```
 ng g directive confirmation-panel --skip-tests
 ```
+* Generar Pipe
+```
+ng g pipe number-prefix --skip-tests
+```
+
+
+
+
 
