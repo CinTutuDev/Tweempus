@@ -50,5 +50,8 @@ ng g c contador --skip-tests --style none
 ```
 ng g class twimp.model --skip-tests
 ```
-
+* Generar directivas
+```
+ng g directive confirmation-panel --skip-tests
+```
 
