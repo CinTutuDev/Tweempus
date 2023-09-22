@@ -19,6 +19,7 @@ Para construir el proyecto `ng build` to build the project. Se almacenarán en l
 ### Diseño 👉 :  [Bootstrap](https://getbootstrap.com/) 
 ### Hosting GitHub 👉  : [AngularComponentBasic](https://cintutudev.github.io/AngularComponentBasic) 
 ### Flexbox  👉 : [Conceptos básicos](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+### HostListener  👉 : [HostListener](https://angular.io/api/core/HostListener)
 
 ## 🎮Comandos
 * Crear proyecto con prefijo para especificar todos los componentes que se van ha crear
@@ -50,5 +51,16 @@ ng g c contador --skip-tests --style none
 ```
 ng g class twimp.model --skip-tests
 ```
+* Generar directivas
+```
+ng g directive confirmation-panel --skip-tests
+```
+* Generar Pipe
+```
+ng g pipe number-prefix --skip-tests
+```
+
+
+
 
 
