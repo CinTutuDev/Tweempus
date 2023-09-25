@@ -1,13 +1,29 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { ProfileComponent } from './profile.component';
+import { MyTwimpsComponent } from './my-twimps/my-twimps.component';
+import { FavoriteTwimpsComponent } from './favorite-twimps/favorite-twimps.component';
 
 const profileRoutes: Routes = [
-  { path: 'profile', component: ProfileComponent }
+  {
+    path: 'profile',
+    component: ProfileComponent,
+    children: [
+      {
+        path: 'my-twimps',
+        component: MyTwimpsComponent,
+      },
+      {
+        path: 'favorite-twimps',
+        component: FavoriteTwimpsComponent,
+      },
+    ],
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(profileRoutes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class ProfileRoutingModule { }
+export class ProfileRoutingModule {}

@@ -12,11 +12,14 @@
 
   <nav class="author_nav">
     <ul class="author_nav_list">
-      <li class="author_nav_list_item author_nav_list_item-selected">
-        <a class="author_nav_list_link">Mis Twits</a>
+      <li
+        class="author_nav_list_item"
+        routerLinkActive="author_nav_list_item-selected"
+      >
+        <a class="author_nav_list_link" routerLink="/profile/my-twimps">Mis Twits</a>
       </li>
-      <li class="author_nav_list_item">
-        <a class="author_nav_list_link">Mis Favoritos</a>
+      <li class="author_nav_list_item" routerLinkActive="author_nav_list_item-selected">
+        <a class="author_nav_list_link"  routerLink="/profile/favorite-twimps">Mis Favoritos</a>
       </li>
     </ul>
   </nav>
