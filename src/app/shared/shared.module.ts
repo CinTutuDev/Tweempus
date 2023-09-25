@@ -9,6 +9,6 @@ import { TwimpListComponent } from './twimp/twimp-list/twimp-list.component';
 @NgModule({
   declarations: [TwimpCardComponent, TwimpListComponent, AuthorCardComponent],
   imports: [CommonModule],
-  exports: [TwimpCardComponent, TwimpListComponent],
+  exports: [TwimpCardComponent, TwimpListComponent, AuthorCardComponent],
 })
 export class SharedModule {}
