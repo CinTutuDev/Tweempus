@@ -1,0 +1,30 @@
+/* RESPONSIVE
+   ========================================================================= */
+
+
+/* Moviles en horizontal o tablets en vertical
+   ------------------------------------------------------------------------- */
+
+@media (min-width: 768px) {
+  .profile_twimps {
+    float: right;
+    width: 65%;
+    transition: .35s ease-in-out
+  }
+}
+
+
+/* Tablets en horizonal y escritorios normales
+   ------------------------------------------------------------------------- */
+
+@media (min-width: 1024px) {
+  .profile_twimps {
+    width: 68%;
+  }
+}
+
+
+/* Escritorios muy anchos
+   ------------------------------------------------------------------------- */
+
+@media (min-width: 1200px) {}

@@ -30,3 +30,7 @@ li {
   list-style-position: inside;
   box-sizing: border-box;
 }
+.main{
+  box-sizing: border-box;
+  overflow: hidden;
+}
