@@ -11,6 +11,11 @@ const profileRoutes: Routes = [
     component: ProfileComponent,
     children: [
       {
+        path: '',
+        redirectTo: '/profile/my-twimps',
+        pathMatch: 'full'
+      },
+      {
         path: 'my-twimps',
         component: MyTwimpsComponent,
       },

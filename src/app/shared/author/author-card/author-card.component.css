@@ -79,6 +79,7 @@
   margin-right: 0.2em;
   font-weight: bold;
   font-size: 95%;
+  text-decoration: none;
 }
 
 .author_nav_list_link:hover {
