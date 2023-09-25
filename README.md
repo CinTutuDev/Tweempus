@@ -31,6 +31,10 @@ Para construir el proyecto `ng build` to build the project. Se almacenarán en l
  ```
  ng g m core
  ```
+* Crear módulos y routing
+```
+ng g m profile  --routing
+```
 * Crear componentes sin archivo de prueba
 ```
  ng g c header --skip-tests
