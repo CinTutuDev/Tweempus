@@ -63,6 +63,10 @@ ng g directive confirmation-panel --skip-tests
 ```
 ng g pipe number-prefix --skip-tests
 ```
+* Generar Service
+```
+ng g service author --skip-tests
+```
 ## 📊 Instalación de JSON Server 
 1º De manera global:
 ```
