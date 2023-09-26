@@ -3,6 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 
 @NgModule({
   imports: [],
-  exports: [RouterModule],
+  exports: [RouterModule]
 })
 export class ProfileRoutingModule {}

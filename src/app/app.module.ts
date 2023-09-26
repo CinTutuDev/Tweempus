@@ -10,6 +10,8 @@ import { SharedModule } from './shared/shared.module';
 import { LoginModule } from './login/login.module';
 import { ProfileModule } from './profile/profile.module';
 import { ErrorComponent } from './error/error.component';
+import { HttpClientModule } from '@angular/common/http';
+import { TranslocoRootModule } from './transloco-root.module';
 
 @NgModule({
   declarations: [AppComponent, ErrorComponent],
@@ -20,7 +22,9 @@ import { ErrorComponent } from './error/error.component';
     DashboardModule,
     SharedModule,
     LoginModule,
-    ProfileModule
+    ProfileModule,
+    HttpClientModule,
+    TranslocoRootModule
   ],
   providers: [],
   bootstrap: [AppComponent],
