@@ -9,9 +9,10 @@ import { DashboardModule } from './dashboard/dashboard.module';
 import { SharedModule } from './shared/shared.module';
 import { LoginModule } from './login/login.module';
 import { ProfileModule } from './profile/profile.module';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, ErrorComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
