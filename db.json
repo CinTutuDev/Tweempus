@@ -1,0 +1,51 @@
+{
+  "authors": [
+    {
+      "id": "1",
+      "fullName": "David East",
+      "image": "https://randomuser.me/api/portraits/men/83.jpg"
+    },
+    {
+      "id": "2",
+      "fullName": "David Teitelbaum",
+      "image": "https://randomuser.me/api/portraits/men/82.jpg"
+    }
+  ],
+  "authenticated": [],
+  "twimps": [
+    {
+      "id": "Mx5Cf1483389903318",
+      "author": "1",
+      "by": "David East",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam efficitur sodales libero, sit amet posuere arcu consectetur ut. Nam volutpat ligula ac nunc consectetur vestibulum.",
+      "timestamp": "01-01-2023"
+    },
+    {
+      "id": "T4qdo1483390015454",
+      "author": "2",
+      "by": "David Teitelbaum",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam efficitur sodales libero, sit amet posuere arcu consectetur ut. Nam volutpat ligula ac nunc consectetur vestibulum.",
+      "timestamp": "01-01-2023"
+    }
+  ],
+  "author-favorites": [
+    {
+      "id": "1",
+      "twimps": ["T4qdo1483390015454"]
+    },
+    {
+      "id": "2",
+      "twimps": ["Mx5Cf1483389903318"]
+    }
+  ],
+  "author-twimps": [
+    {
+      "id": "1",
+      "twimps": ["Mx5Cf1483389903318"]
+    },
+    {
+      "id": "2",
+      "twimps": ["T4qdo1483390015454"]
+    }
+  ]
+}
