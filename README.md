@@ -63,8 +63,15 @@ ng g directive confirmation-panel --skip-tests
 ```
 ng g pipe number-prefix --skip-tests
 ```
-
-
+## 📊 Instalación de JSON Server 
+1º De manera global:
+```
+npm install -g json-server
+```
+2º Dentro del proyecto
+```
+json-server --watch db.json
+```
 
 
 
