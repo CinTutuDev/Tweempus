@@ -7,10 +7,10 @@ import { TwimpModel } from '../twimp.model';
 })
 export class TwimpCardComponent {
   @Input() twimp!: TwimpModel;
-  esClick: boolean = false;
+ /*  esClick: boolean = false;
 
   cambiarFavorite(twimp: TwimpModel) {
     twimp.favorite = !twimp.favorite;
     this.esClick = true;
-  }
+  } */
 }

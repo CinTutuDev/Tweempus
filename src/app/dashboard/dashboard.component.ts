@@ -4,7 +4,7 @@ import { AuthorService } from '../shared/author/author.service';
 import { TwimpService } from '../shared/twimp/twimp.service';
 
 import { TwimpModel } from '../shared/twimp/twimp.model';
-
+import { from } from 'rxjs';
 
 @Component({
   selector: 'tweempus-dashboard',
@@ -12,13 +12,23 @@ import { TwimpModel } from '../shared/twimp/twimp.model';
   styleUrls: ['./dashboard.component.css'],
 })
 export class DashboardComponent implements OnInit {
-
-
   TwimList: TwimpModel[] = [];
 
   constructor(private authorS: AuthorService, private twimpS: TwimpService) {}
 
   ngOnInit(): void {
-    this.twimpS.getTwimps().subscribe((twimpsL) => this.TwimList = twimpsL);
+    this.twimpS.getTwimps().subscribe((twimps) => {
+      from(twimps).subscribe((twimp) => {
+        this.authorS.getAuthor(twimp.author.id).subscribe((author) => {
+          twimp.author = author;
+          this.twimpS
+            .getFavoriteByAuthor('1', twimp.id)
+            .subscribe((favorite) => {
+              twimp.favorite = favorite;
+              this.TwimList.push(twimp);
+            });
+        });
+      });
+    });
   }
 }

@@ -46,7 +46,14 @@ export class TwimpService {
   }
   getFavoriteByAuthor(idAuthor: string, idtwimp: string): Observable<boolean> {
     return this.http.get(this.urlFav + '/' + idAuthor).pipe(
-      map((res) => true),
+      map((response: any) => {
+        let favorites: string[] = response['twimps'];
+        if (favorites.indexOf(idtwimp) == -1) {
+          return false;
+        } else {
+          return true;
+        }
+      }),
       catchError(this.handleError)
     );
   }

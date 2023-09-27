@@ -59,38 +59,23 @@
 }
 
 .fav_icon {
-  color: #666;
+  color:#55d609;
   text-decoration: none;
   font-size: 20px;
   transition: .35s ease-in-out
 }
 
-.fav_icon-selected,
-.fav_icon:hover {
+.fav_icon-selected, .fav_icon:hover {
   color: #d94f5c;
   font-weight: bold;
   font-size: 35px;
   transition: .35s ease-in-out;
 }
 
-.fav_icon-selected,
-.fav_icon-selected:active {
-  text-decoration: none;
-  font-size: 25px;
+.fav_icon-selected, .fav_icon-selected:active {
+  font-size: 30px;
   transition: .35s ease-in-out
 }
-.clicked {
-  text-decoration: none;
-  color: rgb(0, 21, 255); /* Cambiar el color del corazón a rojo cuando se hace clic */
-  font-size: 35px; /* Asegurar que el tamaño sea igual al de .fav_icon-selected o mayor */
-  transform: scale(1.5); /* Aumentar el tamaño del corazón al hacer clic */
-  transition: color 0.3s ease, transform 0.3s ease; /* Agregar una transición suave */
-}
-
-
-
-
-
 
 
 /* RESPONSIVE
@@ -102,6 +87,6 @@
 
 @media (min-width: 768px) {
   .twimp {
-    margin: 0 auto 1em auto;
+      margin: 0 auto 1em auto;
   }
 }
