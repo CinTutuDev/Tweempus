@@ -12,11 +12,13 @@ import { TwimpModel } from '../shared/twimp/twimp.model';
   styleUrls: ['./dashboard.component.css'],
 })
 export class DashboardComponent implements OnInit {
+
+
   TwimList: TwimpModel[] = [];
 
   constructor(private authorS: AuthorService, private twimpS: TwimpService) {}
 
   ngOnInit(): void {
-    this.twimpS.getTwimps().subscribe((twimpsL) => console.log(twimpsL));
+    this.twimpS.getTwimps().subscribe((twimpsL) => this.TwimList = twimpsL);
   }
 }
