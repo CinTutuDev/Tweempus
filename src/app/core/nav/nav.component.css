@@ -37,6 +37,7 @@
   font-weight: bold;
   box-sizing: border-box;
   text-align: center;
+  text-decoration: none;
 }
 
 .nav_list_link:hover, .nav_list_link:focus, .nav_list_item-selected .nav_list_link {

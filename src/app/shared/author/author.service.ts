@@ -11,6 +11,8 @@ import { AuthorModel } from './author.model';
 export class AuthorService {
   private url: string = 'http://localhost:3000/authors';
 
+  constructor(private http: HttpClient) {}
+
   getAuthor(id: string): Observable<AuthorModel> {
     /* da error porque lo inicializo a null y luego le doy valor en el map  */
     /* let author: AuthorModel = null; */
@@ -36,6 +38,4 @@ export class AuthorService {
     console.error(errMsg);
     return throwError(() => errMsg);
   }
-
-  constructor(private http: HttpClient) {}
 }
