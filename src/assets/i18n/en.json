@@ -1,3 +1,14 @@
 {
-  "hello": "Hello world!"
+  "hello": "Hello world!",
+  "APP_TITLE": "Quickstart",
+  "VERSION": "Version",
+  "EXAMPLE_LOGIN_INFO": "Use this user and password for login",
+  "USERNAME": "Username",
+  "PASSWORD": "Password",
+  "CHECK_IN": "Check in",
+  "LOGIN": "Login",
+  "LOGOUT": "Logout",
+  "VIEW": "Views",
+  "HOME": "Home",
+  "LOGIN_TITLE": "Press the Log-In button to enter Tweempus with your Google account"
 }

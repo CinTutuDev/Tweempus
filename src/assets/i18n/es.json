@@ -1,1 +1,13 @@
-{}
+{
+"hello": "Hola Mundo!",
+"APP_TITLE": "JEE seed",
+"VERSION": "Versión",
+"EXAMPLE_LOGIN_INFO": "Usuario y contraseña de ejemplo",
+"USERNAME": "Usuario",
+"PASSWORD": "Contraseña",
+"CHECK_IN": "RegÍstrate",
+"LOGIN": "Entrar",
+"LOGOUT": "Salir",
+"VIEW": "Vistas",
+"HOME": "Inicio",
+"LOGIN_TITLE": "Pulsa el botón de Log-In para entrar en Tweempus con tu cuenta de Google"}
