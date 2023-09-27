@@ -67,6 +67,10 @@ ng g pipe number-prefix --skip-tests
 ```
 ng g service author --skip-tests
 ```
+* Generar Clase
+```
+ng g class token --skip-tests
+```
 ## 📊 Instalación de JSON Server 
 1º De manera global:
 ```
