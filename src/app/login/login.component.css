@@ -15,11 +15,36 @@
   max-width: 150px;
 }
 
-.login_text {
+.login_form_label {
   text-align: center;
-  margin: 0 0 1.5em 0;
   font-size: 98%;
   word-spacing: -0.4pt;
+  display: block;
+  margin: 20px auto;
+  width: 80%;
+}
+
+.login_form_error {
+  text-align: center;
+  font-size: 75%;
+  word-spacing: -0.4pt;
+  margin: 20px auto;
+  width: 80%;
+  color: red;
+}
+
+.login_form_input-text {
+  display: block;
+  padding: 10px;
+  margin: 20px auto;
+  font-size: 110%;
+  border: none;
+  border-bottom: solid 2px #c9c9c9;
+  transition: border 0.3s;
+}
+
+.login_form_input-text:focus {
+  border-bottom: solid 2px #969696;
 }
 
 .login_button {
