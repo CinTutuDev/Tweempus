@@ -80,6 +80,14 @@ npm install -g json-server
 ```
 json-server --watch db.json
 ```
+## 👀❗ Para cambiar el último commit
+```
+ git commit --amend -m "Add(formulario de login):Reactive Forms"
+```
+```
+git push --force
+```
+
 
 
 
