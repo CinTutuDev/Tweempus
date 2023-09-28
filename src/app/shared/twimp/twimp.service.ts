@@ -57,6 +57,23 @@ export class TwimpService {
       catchError(this.handleError)
     );
   }
+  /* agregar un twimp a favoritos con post */
+  addTwimpToF(authorId: string, twimpId: string): Observable<any> {
+    return this.http
+      .post(`${this.urlFav}/${authorId}/add`, { twimpId })
+      .pipe(catchError(this.handleError));
+  }
+  /* borrar un twimp a favoritos con post */
+  removeTwimpF(authorId: string, twimpId: string): Observable<any> {
+    return this.http
+      .post(`${this.urlFav}/${authorId}/remove`, { twimpId })
+      .pipe(catchError(this.handleError));
+  }
+
+  // actualiza estado del objeto Twimp después de agregar o eliminar
+  updateTwimpF(twimp: TwimpModel, isFavorite: boolean) {
+    twimp.favorite = isFavorite;
+  }
 
   handleError(error: any) {
     let errMsg = error.message
