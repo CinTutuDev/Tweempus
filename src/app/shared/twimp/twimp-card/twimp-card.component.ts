@@ -12,10 +12,13 @@ export class TwimpCardComponent {
 
   constructor(private twimpS: TwimpService) {}
 
-  changeTF() {
-    const authorId = '1';
-    const twimpId = this.twimp.id;
+  changeTF(authorId: string | null) {
+    /* Si no hay user no se puede añdir a favorito */
+    if (!authorId) {
+      return;
+    }
 
+    const twimpId = this.twimp.id;
     // Verificar si el twimp ya es favorito o no
     this.twimpS
       .getFavoriteByAuthor(authorId, twimpId)
