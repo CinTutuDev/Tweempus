@@ -24,11 +24,21 @@ export class AuthenticationService {
     private router: Router
   ) {}
 
+  /* recuperar token al inciar servicio el localStorage... JSON.parse--> toma una cadena de texto JSON y la convierte de nuevo en un objet */
+  guardedToken = localStorage.getItem('token');
+
+  if(guardedToken: string) {
+    this.token = JSON.parse(guardedToken);
+  }
+
   login(idAuthor: string): void {
     this.authorS.getAuthor(idAuthor).subscribe((author) => {
       const tokenGenerated = this.generateToken();
       this.saveSession(tokenGenerated, author.id).subscribe((response: any) => {
         this.token = new Token(response['id'], response['author']);
+        /* Guardar token ....JSON.stringify -->convierte un objeto JavaScript en una cadena de texto JSON */
+        localStorage.setItem('token', JSON.stringify(this.token));
+
         this.router.navigate(['/dashboard']);
       });
     });
@@ -37,6 +47,8 @@ export class AuthenticationService {
   logout(): void {
     this.deleteSession().subscribe((response) => {
       this.token = null;
+      /* al cerrar sesion borro token */
+      localStorage.removeItem('token');
       this.router.navigate(['/login']);
     });
   }
