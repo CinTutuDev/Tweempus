@@ -71,6 +71,10 @@ ng g service author --skip-tests
 ```
 ng g class token --skip-tests
 ```
+* Crear Pipes sin archivo de pruebas
+```
+ ng g pipe sort-by --skip-tests
+```
 ## 📊 Instalación de JSON Server 
 1º De manera global:
 ```
