@@ -36,6 +36,19 @@ export class TwimpService {
       catchError(this.handleError)
     );
   }
+
+  setTwimp(twimp: TwimpModel): Observable<any> {
+    let dbTwimp: any = {
+      id: twimp.id,
+      author: twimp.author.id,
+      by: twimp.author.fullName,
+      content: twimp.content,
+      timestamp: twimp.timestamp,
+    };
+
+    return this.http.post(this.url, dbTwimp).pipe(catchError(this.handleError));
+  }
+
   getFavoriteByAuthor(idAuthor: string, idtwimp: string): Observable<boolean> {
     return this.http.get(this.urlFav + '/' + idAuthor).pipe(
       map((response: any) => {

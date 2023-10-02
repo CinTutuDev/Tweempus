@@ -17,7 +17,6 @@ import { SignupComponent } from './signup/signup.component';
     TranslocoRootModule,
     ReactiveFormsModule,
     SharedModule,
-    ReactiveFormsModule
   ],
   declarations: [LoginComponent, SignupComponent],
 })

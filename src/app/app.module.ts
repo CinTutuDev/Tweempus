@@ -13,6 +13,7 @@ import { ErrorComponent } from './error/error.component';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { TranslocoRootModule } from './transloco-root.module';
 import { LogInterceptor } from './interceptors/log-interceptor';
+import { CreateTwimpModule } from './create-twimp/create-twimp.module';
 
 @NgModule({
   declarations: [AppComponent, ErrorComponent],
@@ -25,7 +26,9 @@ import { LogInterceptor } from './interceptors/log-interceptor';
     LoginModule,
     ProfileModule,
     HttpClientModule,
-    TranslocoRootModule
+    TranslocoRootModule,
+    CreateTwimpModule
+
   ],
   providers: [  {
     provide: HTTP_INTERCEPTORS,
