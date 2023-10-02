@@ -8,10 +8,11 @@ import { TwimpListComponent } from './twimp/twimp-list/twimp-list.component';
 /* Importacion de los servicios */
 import { AuthorService } from './author/author.service';
 import { TwimpService } from './twimp/twimp.service';
+import { SortByPipe } from './sort-by.pipe';
 
 
 @NgModule({
-  declarations: [TwimpCardComponent, TwimpListComponent, AuthorCardComponent],
+  declarations: [TwimpCardComponent, TwimpListComponent, AuthorCardComponent, SortByPipe],
   imports: [CommonModule, RouterModule],
   exports: [
     TwimpCardComponent,

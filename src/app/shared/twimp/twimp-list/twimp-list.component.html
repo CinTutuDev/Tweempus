@@ -1,4 +1,4 @@
-<section class="twimp_list" *ngFor="let item of twimpsL">
+<section class="twimp_list" *ngFor="let item of twimpsL | sortBy">
   <!-- El twimp es de twimp-card.component.ts hijo y se le pasa array del padre twimp-list.component.ts-->
   <tweempus-twimp-card [twimp]="item"></tweempus-twimp-card>
 </section>
