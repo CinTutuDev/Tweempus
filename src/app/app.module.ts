@@ -10,8 +10,9 @@ import { SharedModule } from './shared/shared.module';
 import { LoginModule } from './login/login.module';
 import { ProfileModule } from './profile/profile.module';
 import { ErrorComponent } from './error/error.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { TranslocoRootModule } from './transloco-root.module';
+import { LogInterceptor } from './interceptors/log-interceptor';
 
 @NgModule({
   declarations: [AppComponent, ErrorComponent],
@@ -26,7 +27,11 @@ import { TranslocoRootModule } from './transloco-root.module';
     HttpClientModule,
     TranslocoRootModule
   ],
-  providers: [],
+  providers: [  {
+    provide: HTTP_INTERCEPTORS,
+    useClass: LogInterceptor,
+    multi: true,
+  },],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

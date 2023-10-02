@@ -16,7 +16,7 @@ export class DashboardComponent implements OnInit {
 
   constructor(private authorS: AuthorService, private twimpS: TwimpService) {}
 
-  ngOnInit(): void {
+  ngOnInit(){
     this.twimpS.getTwimps().subscribe((twimps) => {
       from(twimps).subscribe((twimp) => {
         this.authorS.getAuthor(twimp.author.id).subscribe((author) => {
