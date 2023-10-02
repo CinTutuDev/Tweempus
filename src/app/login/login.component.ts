@@ -21,10 +21,10 @@ export class LoginComponent implements OnInit {
   constructor(
     private authenticationS: AuthenticationService,
     private authorS: AuthorService,
-    private FormB: FormBuilder
+    private formB: FormBuilder
   ) {}
   ngOnInit(): void {
-    this.userForm = this.FormB.group({
+    this.userForm = this.formB.group({
       idAuthor: ['', Validators.required],
     });
   }

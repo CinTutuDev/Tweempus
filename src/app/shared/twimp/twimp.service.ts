@@ -11,7 +11,7 @@ import { TwimpModel } from './twimp.model';
   providedIn: 'root',
 })
 export class TwimpService {
-  private urlTW: string = 'http://localhost:3000/twimps';
+  private url: string = 'http://localhost:3000/twimps';
   private urlFav: string = 'http://localhost:3000/author-favorites';
 
   constructor(private http: HttpClient) {}
@@ -19,25 +19,17 @@ export class TwimpService {
   getTwimps(): Observable<TwimpModel[]> {
     let twimps: TwimpModel[] = [];
 
-    return this.http.get(this.urlTW).pipe(
+    return this.http.get(this.url).pipe(
       map((dbTwimpList: any) => {
-        for (let i = 0; i < dbTwimpList.length; i++) {
-          const dbTwimp = dbTwimpList[i];
-
-          /*  Verifico si 'dbTwimp' es null o undefined */
-          if (dbTwimp) {
-            let twimp: TwimpModel = new TwimpModel(
-              /* 'id' tenga un valor (puede ser una cadena vacía si es nulo) */
-              dbTwimp.id || '',
-              /* para 'id' en la URL */
-              'localhost:4200/twimp/' + (dbTwimp.id || ''),
-              /*'author' es un objeto (puede ser un objeto vacío si es nulo) */
-              new AuthorModel(dbTwimp.author || {}),
-              dbTwimp.content || '',
-              dbTwimp.timestamp || ''
-            );
-            twimps.push(twimp);
-          }
+        for (let i in dbTwimpList) {
+          let twimp: TwimpModel = new TwimpModel(
+            dbTwimpList[i].id,
+            'localhost:4200/twimp/' + dbTwimpList[i].id,
+            new AuthorModel(dbTwimpList[i].author),
+            dbTwimpList[i].content,
+            dbTwimpList[i].timestamp
+          );
+          twimps.push(twimp);
         }
         return twimps;
       }),
@@ -56,23 +48,6 @@ export class TwimpService {
       }),
       catchError(this.handleError)
     );
-  }
-  /* agregar un twimp a favoritos con post */
-  addTwimpToF(authorId: string, twimpId: string): Observable<any> {
-    return this.http
-      .post(`${this.urlFav}/${authorId}/add`, { twimpId })
-      .pipe(catchError(this.handleError));
-  }
-  /* borrar un twimp a favoritos con post */
-  removeTwimpF(authorId: string, twimpId: string): Observable<any> {
-    return this.http
-      .post(`${this.urlFav}/${authorId}/remove`, { twimpId })
-      .pipe(catchError(this.handleError));
-  }
-
-  // actualiza estado del objeto Twimp después de agregar o eliminar
-  updateTwimpF(twimp: TwimpModel, isFavorite: boolean) {
-    twimp.favorite = isFavorite;
   }
 
   handleError(error: any) {

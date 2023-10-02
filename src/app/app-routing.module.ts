@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
 import { MyTwimpsComponent } from './profile/my-twimps/my-twimps.component';
 import { FavoriteTwimpsComponent } from './profile/favorite-twimps/favorite-twimps.component';
+import { SignupComponent } from './login/signup/signup.component';
 
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
@@ -31,6 +32,7 @@ const routes: Routes = [
     ],
   },
   { path: 'login', component: LoginComponent },
+  { path: 'signup', component: SignupComponent },
   {
     path: '**',
     component: ErrorComponent,

@@ -10,11 +10,11 @@ import { NavComponent } from './nav/nav.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthenticationService } from './authentication.service';
 import { TranslocoRootModule } from '../transloco-root.module';
-import { TwimpService } from '../shared/twimp/twimp.service';
+
 @NgModule({
   declarations: [HeaderComponent, NavComponent],
   exports: [HeaderComponent, NavComponent],
   imports: [CommonModule, RouterModule, HttpClientModule, TranslocoRootModule],
-  providers: [AuthenticationService, TwimpService]
+  providers: [AuthenticationService]
 })
 export class CoreModule {}
