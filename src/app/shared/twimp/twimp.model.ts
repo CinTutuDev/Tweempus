@@ -1,74 +1,68 @@
-import { AuthorModel } from '../author/author.model';
+import { Author } from '../author/author.model';
 
-export class TwimpModel {
-  private _id: string;
-  private _url: string;
-  private _author: AuthorModel;
-  private _content: string;
-  private _timestamp: string;
-  private _favorite: boolean;
 
-  constructor(
-    id: string,
-    url: string,
-    author: AuthorModel,
-    content: string,
-    timestamp: string,
-    favorite: boolean = false
-  ) {
-    this._id = id;
-    this._url = url;
-    this._author = author;
-    this._content = content;
-    this._timestamp = timestamp;
-    this._favorite = favorite;
-  }
+export class Twimp {
+    private _id: string;
+    private _url: string;
+    private _author: Author;
+    private _content: string;
+    private _timestamp: string;
+    private _favorite: boolean;
 
-  get id(): string {
-    return this._id;
-  }
+    constructor(id: string, url: string, author: Author, content: string, timestamp: string) {
+        this._id = id;
+        this._url = url;
+        this._author = author;
+        this._content = content;
+        this._timestamp = timestamp;
+        this._favorite = false;
+    }
 
-  get url(): string {
-    return this._url;
-  }
+    get id(): string {
+        return this._id;
+    }
 
-  get author(): AuthorModel {
-    return this._author;
-  }
+    get url(): string {
+        return this._url;
+    }
 
-  get content(): string {
-    return this._content;
-  }
+    get author(): Author{
+        return this._author;
+    }
 
-  get timestamp(): string {
-    return this._timestamp;
-  }
+    get content(): string {
+        return this._content;
+    }
 
-  get favorite(): boolean {
-    return this._favorite;
-  }
+    get timestamp(): string {
+        return this._timestamp;
+    }
 
-  set id(id: string) {
-    this._id = id;
-  }
+    get favorite(): boolean {
+        return this._favorite;
+    }
 
-  set url(url: string) {
-    this._url = url;
-  }
+    set id(id: string) {
+        this._id = id;
+    }
 
-  set author(author: AuthorModel) {
-    this._author = author;
-  }
+    set url(url: string) {
+        this._url = url;
+    }
 
-  set content(content: string) {
-    this._content = content;
-  }
+    set author(author: Author) {
+        this._author = author;
+    }
 
-  set timestamp(timestamp: string) {
-    this._timestamp = timestamp;
-  }
+    set content(content: string) {
+        this._content = content;
+    }
 
-  set favorite(favorite: boolean) {
-    this._favorite = favorite;
-  }
+    set timestamp(timestamp: string) {
+        this._timestamp = timestamp;
+    }
+
+    set favorite(favorite: boolean) {
+        this._favorite = favorite;
+    }
 }

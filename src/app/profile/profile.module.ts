@@ -6,9 +6,22 @@ import { SharedModule } from '../shared/shared.module';
 import { ProfileComponent } from './profile.component';
 import { FavoriteTwimpsComponent } from './favorite-twimps/favorite-twimps.component';
 import { MyTwimpsComponent } from './my-twimps/my-twimps.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
 
 @NgModule({
-  declarations: [ProfileComponent, FavoriteTwimpsComponent, MyTwimpsComponent],
-  imports: [CommonModule, ProfileRoutingModule, SharedModule],
+  declarations: [
+    ProfileComponent,
+    FavoriteTwimpsComponent,
+    MyTwimpsComponent,
+    EditProfileComponent,
+  ],
+
+  imports: [
+    CommonModule,
+    SharedModule,
+    ProfileRoutingModule,
+    ReactiveFormsModule,
+  ],
 })
 export class ProfileModule {}

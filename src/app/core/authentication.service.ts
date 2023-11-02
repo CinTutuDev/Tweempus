@@ -7,14 +7,11 @@ import { catchError, map } from 'rxjs/operators';
 
 import { AuthorService } from '../shared/author/author.service';
 
-import { AuthorModel } from '../shared/author/author.model';
 import { Token } from './token.model';
-
-@Injectable({
-  providedIn: 'root',
-})
+import { environment } from '../../environments/environment';
+@Injectable()
 export class AuthenticationService {
-  private url: string = 'http://localhost:3000/authenticated';
+  private url: string = environment.url + 'authenticated';
 
   token: Token | null = null;
 
@@ -22,20 +19,23 @@ export class AuthenticationService {
     private httpC: HttpClient,
     private authorS: AuthorService,
     private router: Router
-  ) {}
+  ) {
+    const token = localStorage.getItem('token');
+    if (token != null) {
+      let tokenLS = JSON.parse(token);
+      this.token = new Token(tokenLS['_key'], tokenLS['_idAuthor']);
+    }
+  }
 
   /* recuperar token al inciar servicio el localStorage... JSON.parse--> toma una cadena de texto JSON y la convierte de nuevo en un objet */
- /*  guardedToken = localStorage.getItem('token');
-
-  if(guardedToken: string) {
-    this.token = JSON.parse(guardedToken);
-  } */
+  /*  guardedToken = localStorage.getItem('token');*/
 
   login(idAuthor: string): void {
-    this.authorS.getAuthor(idAuthor).subscribe(author => {
+    this.authorS.getAuthor(idAuthor).subscribe((author) => {
       const tokenGenerated = this.generateToken();
       this.saveSession(tokenGenerated, author.id).subscribe((response: any) => {
         this.token = new Token(response['id'], response['author']);
+        localStorage.setItem('token', JSON.stringify(this.token));
         this.router.navigate(['/dashboard']);
       });
     });
@@ -44,7 +44,6 @@ export class AuthenticationService {
   logout(): void {
     this.deleteSession().subscribe((response) => {
       this.token = null;
-      /* al cerrar sesion borro token */
       localStorage.removeItem('token');
       this.router.navigate(['/login']);
     });

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Author } from '../author.model';
 
 @Component({
   selector: 'tweempus-author-card',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./author-card.component.css']
 })
 export class AuthorCardComponent {
-
+  @Input() author: Author | null = null;
 }

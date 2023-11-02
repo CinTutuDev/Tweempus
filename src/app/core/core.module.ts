@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
-import { RouterModule} from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 import { HeaderComponent } from './header/header.component';
 import { NavComponent } from './nav/nav.component';
@@ -14,7 +14,7 @@ import { TranslocoRootModule } from '../transloco-root.module';
 @NgModule({
   declarations: [HeaderComponent, NavComponent],
   exports: [HeaderComponent, NavComponent],
-  imports: [CommonModule, RouterModule, HttpClientModule, TranslocoRootModule],
-  providers: [AuthenticationService]
+  imports: [CommonModule, HttpClientModule, RouterModule, TranslocoRootModule],
+  providers: [AuthenticationService],
 })
 export class CoreModule {}

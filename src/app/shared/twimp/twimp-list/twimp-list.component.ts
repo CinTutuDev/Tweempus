@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { TwimpModel } from '../twimp.model';
+import { Twimp } from '../twimp.model';
 
 @Component({
   selector: 'tweempus-twimp-list',
@@ -8,5 +8,5 @@ import { TwimpModel } from '../twimp.model';
 })
 export class TwimpListComponent {
   /* se usa en componente hijo para recibir valores desde el padre */
-  @Input() twimpsL!: TwimpModel[];
+  @Input() twimps!: Twimp[];
 }

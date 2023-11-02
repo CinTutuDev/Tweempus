@@ -9,8 +9,8 @@ import {
 import { Router } from '@angular/router';
 import { AuthenticationService } from '../core/authentication.service';
 import { TwimpService } from '../shared/twimp/twimp.service';
-import { AuthorModel } from '../shared/author/author.model';
-import { TwimpModel } from '../shared/twimp/twimp.model';
+import { Author } from '../shared/author/author.model';
+import { Twimp } from '../shared/twimp/twimp.model';
 
 @Component({
   selector: 'tweempus-create-twimp',
@@ -33,14 +33,23 @@ export class CreateTwimpComponent implements OnInit {
   }
 
   createTwimp(form: any) {
-    this.twimpS.getTwimps().subscribe(response => {
-      let twimpDate: string = new Date().toLocaleDateString().replace(/\//g, '-');
-      let author: AuthorModel = new AuthorModel(this.authService.token!.idAuthor);
-      let twimp: TwimpModel = new TwimpModel(response.length.toString(), '', author, form.value.content, twimpDate);
-      this.twimpS.setTwimp(twimp).subscribe(
-        response => this.router.navigate(['/dashboard'])
-      )
+    this.twimpS.getTwimps().subscribe((response) => {
+      let twimpDate: string = new Date()
+        .toLocaleDateString()
+        .replace(/\//g, '-');
+      let author: Author = new Author(
+        this.authService.token!.idAuthor
+      );
+      let twimp: Twimp = new Twimp(
+        response.length.toString(),
+        '',
+        author,
+        form.value.content,
+        twimpDate
+      );
+      this.twimpS
+        .setTwimp(twimp)
+        .subscribe((response) => this.router.navigate(['/dashboard']));
     });
   }
-
 }

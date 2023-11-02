@@ -2,127 +2,29 @@
   "authors": [
     {
       "id": "1",
-      "fullName": "David East",
-      "image": "https://randomuser.me/api/portraits/men/83.jpg"
+      "fullName": "Josele",
+      "image": "https://i.pinimg.com/236x/17/4b/ce/174bce6319a58afee60498fcd2c7c777.jpg"
     },
     {
       "id": "2",
       "fullName": "David Teitelbaum",
-      "image": "https://randomuser.me/api/portraits/men/82.jpg"
+      "image": "https://i.pinimg.com/236x/bd/83/9e/bd839efe35fdd27358f2dc1851f6ee83.jpg"
+    },
+    {
+      "id": "pepe",
+      "fullName": "Pepa",
+      "image": "https://cdn.autobild.es/sites/navi.axelspringer.es/public/media/image/2016/09/569465-whatsapp-que-tus-contactos-ponen-rana-perfil.jpg?tf=3840x"
+    },
+    {
+      "id": "Oscuro",
+      "fullName": "DonDark",
+      "image": "https://estopalwasap.com/wp-content/uploads/2019/06/fotos-para-perfil-de-whatsapp-10.jpg"
     }
   ],
   "authenticated": [
     {
-      "id": "5EOWW1695823872851",
-      "author": "1"
-    },
-    {
-      "id": "EnZHI1695823926033",
-      "author": "1"
-    },
-    {
-      "id": "ZxcKN1695827125652",
-      "author": "1"
-    },
-    {
-      "id": "dlDeS1695828620468",
-      "author": "1"
-    },
-    {
-      "id": "YOtOq1695885746699",
-      "author": "1"
-    },
-    {
-      "id": "jSA8o1695888151125",
-      "author": "1"
-    },
-    {
-      "id": "Vjbek1695888225016",
-      "author": "1"
-    },
-    {
-      "id": "n6RFS1695890647586",
-      "author": "1"
-    },
-    {
-      "id": "1quU81695894258191",
-      "author": "1"
-    },
-    {
-      "id": "WVVwW1695971066833",
-      "author": "1"
-    },
-    {
-      "id": "N4m3z1695972509797",
-      "author": "2"
-    },
-    {
-      "id": "z8CJJ1695972664989",
-      "author": "2"
-    },
-    {
-      "id": "Pm3YI1695975276011",
-      "author": "2"
-    },
-    {
-      "id": "Ochcr1696237041188",
-      "author": "2"
-    },
-    {
-      "id": "nSgJI1696237702451",
-      "author": "1"
-    },
-    {
-      "id": "ID7DJ1696244925595",
-      "author": "1"
-    },
-    {
-      "id": "Fy2Nu1696255964165",
-      "author": "1"
-    },
-    {
-      "id": "zuz9u1696256014055",
-      "author": "2"
-    },
-    {
-      "id": "txVp81696256595331",
-      "author": "1"
-    },
-    {
-      "id": "xdcci1696257787216",
-      "author": "2"
-    },
-    {
-      "id": "WERo71696257840497",
-      "author": "1"
-    },
-    {
-      "id": "BUGPb1696258124413",
-      "author": "1"
-    },
-    {
-      "id": "dvfnI1696258413580",
-      "author": "2"
-    },
-    {
-      "id": "xVedp1696258502910",
-      "author": "1"
-    },
-    {
-      "id": "ZInev1696258737467",
-      "author": "1"
-    },
-    {
-      "id": "FZW2T1696259077150",
-      "author": "2"
-    },
-    {
-      "id": "9Bxo71696260157709",
-      "author": "2"
-    },
-    {
-      "id": "JD7Z61696261171362",
-      "author": "2"
+      "id": "IWyJs1698940604052",
+      "author": "Oscuro"
     }
   ],
   "twimps": [
@@ -142,24 +44,17 @@
     },
     {
       "id": "2",
-      "author": "2",
+      "author": "pepe",
       "by": "Author",
-      "content": "uno de prueba",
-      "timestamp": "2-10-2023"
+      "content": ": A good programmer is someone who always looks both ways before crossing a one-way street. (Doug Linder)",
+      "timestamp": "2-11-2023"
     },
     {
       "id": "3",
-      "author": "2",
+      "author": "Oscuro",
       "by": "Author",
-      "content": "prueba dos",
-      "timestamp": "2-10-2023"
-    },
-    {
-      "id": "4",
-      "author": "3",
-      "by": "Author",
-      "content": "holitaaaa",
-      "timestamp": "2-10-2023"
+      "content": "«No temo a los ordenadores, lo que temo es quedarme sin ellos»\n\nIsaac Asimov",
+      "timestamp": "2-11-2023"
     }
   ],
   "author-favorites": [
@@ -173,6 +68,17 @@
       "id": "2",
       "twimps": [
         "Mx5Cf1483389903318"
+      ]
+    },
+    {
+      "id": "pepe",
+      "twimps": []
+    },
+    {
+      "id": "Oscuro",
+      "twimps": [
+        "2",
+        "3"
       ]
     }
   ],

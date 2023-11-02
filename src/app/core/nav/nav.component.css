@@ -40,7 +40,9 @@
   text-decoration: none;
 }
 
-.nav_list_link:hover, .nav_list_link:focus, .nav_list_item-selected .nav_list_link {
+.nav_list_link:hover,
+.nav_list_link:focus,
+.nav_list_item-selected .nav_list_link {
   color: #d94f5c;
   border-color: #d94f5c;
 }

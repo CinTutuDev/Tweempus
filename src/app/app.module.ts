@@ -12,29 +12,21 @@ import { ProfileModule } from './profile/profile.module';
 import { ErrorComponent } from './error/error.component';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { TranslocoRootModule } from './transloco-root.module';
-import { LogInterceptor } from './interceptors/log-interceptor';
+/* import { LogInterceptor } from './interceptors/log-interceptor'; */
 import { CreateTwimpModule } from './create-twimp/create-twimp.module';
 
 @NgModule({
-  declarations: [AppComponent, ErrorComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     CoreModule,
-    DashboardModule,
-    SharedModule,
+    AppRoutingModule,
     LoginModule,
     ProfileModule,
-    HttpClientModule,
-    TranslocoRootModule,
+    DashboardModule,
     CreateTwimpModule
-
   ],
-  providers: [  {
-    provide: HTTP_INTERCEPTORS,
-    useClass: LogInterceptor,
-    multi: true,
-  },],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

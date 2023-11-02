@@ -13,6 +13,6 @@ const createTwimpRoutes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forChild(createTwimpRoutes)],
-  exports: [RouterModule]
+
 })
 export class CreateTwimpRoutingModule { }

@@ -1,14 +1,14 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { TwimpModel } from './twimp/twimp.model';
+import { Twimp } from './twimp/twimp.model';
 
 @Pipe({
   name: 'sortBy',
   pure: false
 })
 export class SortByPipe implements PipeTransform {
-  transform(array: Array<TwimpModel>): any {
+  transform(array: Array<Twimp>): any {
     if (array) {
-      return array.sort((a: TwimpModel, b: TwimpModel) => {
+      return array.sort((a: Twimp, b: Twimp) => {
         const [aDay, aMonth, aYear] = a.timestamp.split('-');
         const [bDay, bMonth, bYear] = b.timestamp.split('-');
         const aDate = new Date(

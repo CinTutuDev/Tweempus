@@ -19,12 +19,12 @@ export class LoginComponent implements OnInit {
   userNoExist: boolean = false;
 
   constructor(
-    private authenticationS: AuthenticationService,
-    private authorS: AuthorService,
-    private formB: FormBuilder
-  ) {}
-  ngOnInit(): void {
-    this.userForm = this.formB.group({
+    private authService: AuthenticationService,
+    private authorService: AuthorService,
+    private fb: FormBuilder) { }
+
+  ngOnInit() {
+    this.userForm = this.fb.group({
       idAuthor: ['', Validators.required],
     });
   }
@@ -33,15 +33,9 @@ export class LoginComponent implements OnInit {
     if (this.userNoExist) {
       this.userNoExist = false;
     }
-    this.authorS.getAuthor(form.value.idAuthor).subscribe(
-      (author) => {
-        console.log('Author:', author);
-        this.authenticationS.login(form.value.idAuthor);
-      },
-      (error) => {
-        console.error('Error:', error);
-        this.userNoExist = true;
-      }
-    );
+    this.authorService.getAuthor(form.value.idAuthor).subscribe(
+      author => this.authService.login(form.value.idAuthor),
+      error => this.userNoExist = true
+    )
   }
 }

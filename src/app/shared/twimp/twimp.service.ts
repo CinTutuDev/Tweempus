@@ -4,31 +4,27 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 /* Impotación de mis modelos  */
-import { AuthorModel } from '../author/author.model';
-import { TwimpModel } from './twimp.model';
+import { Author } from '../author/author.model';
+import { Twimp } from './twimp.model';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class TwimpService {
-  private url: string = 'http://localhost:3000/twimps';
-  private urlFav: string = 'http://localhost:3000/author-favorites';
 
-  constructor(private http: HttpClient) {}
+  private url: string = environment.url + 'twimps';
+  private urlFavorite: string = environment.url + 'author-favorites';
 
-  getTwimps(): Observable<TwimpModel[]> {
-    let twimps: TwimpModel[] = [];
+  constructor(private httpClient: HttpClient) { }
 
-    return this.http.get(this.url).pipe(
+  getTwimps(): Observable<Twimp[]> {
+    let twimps: Twimp[] = [];
+
+    return this.httpClient.get(this.url).pipe(
       map((dbTwimpList: any) => {
         for (let i in dbTwimpList) {
-          let twimp: TwimpModel = new TwimpModel(
-            dbTwimpList[i].id,
-            'localhost:4200/twimp/' + dbTwimpList[i].id,
-            new AuthorModel(dbTwimpList[i].author),
-            dbTwimpList[i].content,
-            dbTwimpList[i].timestamp
-          );
+          let twimp: Twimp = new Twimp(dbTwimpList[i].id, 'localhost:4200/twimp/' + dbTwimpList[i].id, new Author(dbTwimpList[i].author), dbTwimpList[i].content, dbTwimpList[i].timestamp);
           twimps.push(twimp);
         }
         return twimps;
@@ -37,23 +33,42 @@ export class TwimpService {
     );
   }
 
-  setTwimp(twimp: TwimpModel): Observable<any> {
-    let dbTwimp: any = {
-      id: twimp.id,
-      author: twimp.author.id,
-      by: twimp.author.fullName,
-      content: twimp.content,
-      timestamp: twimp.timestamp,
-    };
+  getAuthorTwimps(idAuthor: string): Observable<Twimp[]> {
+    let twimps: Twimp[] = [];
 
-    return this.http.post(this.url, dbTwimp).pipe(catchError(this.handleError));
+    return this.httpClient.get(this.url).pipe(
+      map((dbTwimpList: any) => {
+        for (let i in dbTwimpList) {
+          if (dbTwimpList[i].author === idAuthor) {
+            let twimp: Twimp = new Twimp(dbTwimpList[i].id, 'localhost:4200/twimp/' + dbTwimpList[i].id, new Author(dbTwimpList[i].author), dbTwimpList[i].content, dbTwimpList[i].timestamp);
+            twimps.push(twimp);
+          }
+        }
+        return twimps;
+      }),
+      catchError(this.handleError)
+    );
   }
 
-  getFavoriteByAuthor(idAuthor: string, idtwimp: string): Observable<boolean> {
-    return this.http.get(this.urlFav + '/' + idAuthor).pipe(
+  setTwimp(twimp: Twimp): Observable<any> {
+    let dbTwimp: any = {
+      'id': twimp.id,
+      'author': twimp.author.id,
+      'by': twimp.author.fullName,
+      'content': twimp.content,
+      'timestamp': twimp.timestamp
+    };
+
+    return this.httpClient.post(this.url, dbTwimp).pipe(
+      catchError(this.handleError)
+    );
+  }
+
+  getFavoritesByAuthor(idAuthor: string, idTwimp: string): Observable<boolean> {
+    return this.httpClient.get(this.urlFavorite + '/' + idAuthor).pipe(
       map((response: any) => {
         let favorites: string[] = response['twimps'];
-        if (favorites.indexOf(idtwimp) == -1) {
+        if (favorites.indexOf(idTwimp) == -1) {
           return false;
         } else {
           return true;
@@ -63,12 +78,29 @@ export class TwimpService {
     );
   }
 
+  getFavoritesTwimps(idAuthor: string): Observable<any> {
+    return this.httpClient.get(this.urlFavorite + '/' + idAuthor).pipe(
+      map((dbFavorites: any) => {
+        return dbFavorites['twimps'];
+      }),
+      catchError(this.handleError)
+    );
+  }
+
+  setFavoriteTwimps(idAuthor: string, twimpList: any): Observable<any> {
+    let dbFavoriteTwimps: any = {
+      'id': idAuthor,
+      'twimps': twimpList
+    };
+
+    return this.httpClient.patch(this.urlFavorite + '/' + idAuthor, dbFavoriteTwimps).pipe(
+      catchError(this.handleError)
+    );
+  }
+
   handleError(error: any) {
-    let errMsg = error.message
-      ? error.message
-      : error.status
-      ? `${error.status} - ${error.statusText}`
-      : 'Server error';
+    let errMsg = (error.message) ? error.message :
+      error.status ? `${error.status} - ${error.statusText}` : 'Server error';
     console.error(errMsg);
     return throwError(() => errMsg);
   }

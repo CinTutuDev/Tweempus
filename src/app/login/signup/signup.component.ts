@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from '../../core/authentication.service';
 import { AuthorService } from '../../shared/author/author.service';
+import { Component, OnInit } from '@angular/core';
 
 import {
   FormBuilder,
@@ -18,27 +18,25 @@ export class SignupComponent implements OnInit {
   userAlreadyExist: boolean = false;
 
   constructor(
-    private authenticationS: AuthenticationService,
-    private authorS: AuthorService,
-    private formB: FormBuilder
-  ) {}
-  ngOnInit(): void {
-    this.newUserForm = this.formB.group({
+    private authService: AuthenticationService,
+    private authorService: AuthorService,
+    private fb: FormBuilder) { }
+
+  ngOnInit() {
+    this.newUserForm = this.fb.group({
       idAuthor: ['', [Validators.required, this.checkNick]],
       fullName: ['', [Validators.required, Validators.minLength(3)]],
-      image: [''],
+      image: ['']
     });
   }
 
   checkNick(fc: FormControl): { [invalidNick: string]: boolean } | null {
     const nick = fc.value,
-      // valida si una cadena está compuesta únicamente por letras en minúscula,
-      //  letras en mayúscula y/o dígitos, y no contiene ningún otro carácter.
       regexp = new RegExp('^[a-zA-Z0-9]*$');
     if (regexp.test(nick)) {
       return null;
     } else {
-      return { invalidNick: true };
+      return { 'invalidNick': true };
     }
   }
 
@@ -46,19 +44,15 @@ export class SignupComponent implements OnInit {
     if (this.userAlreadyExist) {
       this.userAlreadyExist = false;
     }
-    this.authorS.getAuthor(form.value.idAuthor).subscribe(
-      (author) => (this.userAlreadyExist = true),
-      (error) => {
-        this.authorS
-          .setAuthor(form.value.idAuthor, form.value.fullName, form.value.image)
-          .subscribe((response) =>
-            this.authorS
-              .createFavorite(response['id'])
-              .subscribe((response) =>
-                this.authenticationS.login(response['id'])
-              )
-          );
+    this.authorService.getAuthor(form.value.idAuthor).subscribe(
+      author => this.userAlreadyExist = true,
+      error => {
+        this.authorService.setAuthor(form.value.idAuthor, form.value.fullName, form.value.image).subscribe(
+          response => this.authorService.createFavorite(response['id']).subscribe(
+            response => this.authService.login(response['id'])
+          )
+        )
       }
-    );
+    )
   }
 }

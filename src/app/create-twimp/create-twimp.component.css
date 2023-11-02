@@ -7,10 +7,9 @@
   padding: 3em;
   min-height: 300px;
 }
-.pepe{
-  background-color: #993333;
-}
-.create_twimp_label, .create_twimp_textarea {
+
+.create_twimp_label,
+.create_twimp_textarea {
   display: block;
   margin: 15px auto;
   resize: vertical;
