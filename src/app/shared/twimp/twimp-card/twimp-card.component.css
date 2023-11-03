@@ -1,6 +1,8 @@
 .twimp {
-  background-color: #fff;
-  color: #666;
+  background-color: #ebe2cd;
+  color: #353535;
+  font-weight: bold;
+  font-size: large;
   position: relative;
   border-radius: 15px;
   margin: 0 1em 1em 1em;
@@ -46,8 +48,8 @@
   width: 90%;
   margin: 0 auto;
   border: 0;
-  border-bottom: 1px solid #ccc;
-  color: #fff;
+  color: #ebe2cd;
+  border-bottom: 4px solid #ebe2cd;
   margin-top: 0.5em;
 }
 
@@ -59,14 +61,14 @@
 }
 
 .fav_icon {
-  color:#55d609;
+  color:#abacea;
   text-decoration: none;
   font-size: 20px;
   transition: .35s ease-in-out
 }
 
 .fav_icon-selected, .fav_icon:hover {
-  color: #d94f5c;
+  color: #F18F01;
   font-weight: bold;
   font-size: 35px;
   transition: .35s ease-in-out;

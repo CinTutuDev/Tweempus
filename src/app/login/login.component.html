@@ -1,7 +1,7 @@
 <section class="main fadein fadeInLeft section_login">
 
   <div class="login_box rubberBand animated">
-    <img class="login_image" src="assets/images/logo-login.png">
+    <img class="login_image" src="assets/images/TwLoginDark.png">
     <form class="login_form" [formGroup]="userForm" (ngSubmit)="logIn(userForm)">
       <label class="login_form_label">Introduce tu nick y pulsa el botón de Log-In</label>
       <div class="login_form_error" *ngIf="userForm.get('idAuthor')!.hasError('required') && !userForm.get('idAuthor')!.pristine">

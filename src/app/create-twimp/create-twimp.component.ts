@@ -28,7 +28,7 @@ export class CreateTwimpComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     this.newTwimpForm = this.formB.group({
-      content: ['', [Validators.required, Validators.maxLength(140)]],
+      content: ['', [Validators.required, Validators.maxLength(300)]],
     });
   }
 

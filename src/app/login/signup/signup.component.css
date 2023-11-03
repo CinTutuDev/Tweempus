@@ -1,9 +1,9 @@
 .signup_box {
   width: 90%;
   margin: 1em auto;
-  background-color: white;
+  background-color: #ebe2cd;
   border-radius: 15px;
-  box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.35);
+  box-shadow: 0px 4px 5px 1px rgba(76, 81, 135, 0.35);
   padding: 3em;
   min-height: 300px;
 }
@@ -26,6 +26,8 @@
   display: block;
   margin: 20px auto;
   width: 80%;
+  font-weight: bold;
+  color:#1e295a ;
 }
 
 .signup_form_error {
@@ -33,6 +35,7 @@
   word-spacing: -0.4pt;
   margin: 20px auto;
   width: 80%;
+  font-weight: bold;
   color: red;
 }
 
@@ -54,25 +57,25 @@
 .signup_button {
   width: 80%;
   height: 50px;
-  background-color: #d94f5c;
+  background-color: #833500;
   margin: 30px auto 20px;
   display: block;
-  color: white;
+  color: #F5ECD7;
   border: none;
   border-radius: 6px;
   font-size: 110%;
-  box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.35);
+  box-shadow: 0px 4px 5px 1px rgba(76, 81, 135, 0.35);
   cursor: pointer;
 }
 
 .signup_button:hover {
   transition: .35s ease-in-out;
-  background-color: #993333;
+  background-color: #F18F01;
 }
 
 .signup_button:active {
   transition: .35s ease-in-out;
-  background-color: #c64652;
+  background-color: #F18F01;
 }
 
 

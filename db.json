@@ -19,12 +19,21 @@
       "id": "Oscuro",
       "fullName": "DonDark",
       "image": "https://estopalwasap.com/wp-content/uploads/2019/06/fotos-para-perfil-de-whatsapp-10.jpg"
+    },
+    {
+      "id": "Patrick",
+      "fullName": " Rothfuss",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Patrick_Rothfuss.jpg"
     }
   ],
   "authenticated": [
     {
-      "id": "IWyJs1698940604052",
-      "author": "Oscuro"
+      "id": "uXvQz1699002998234",
+      "author": "2"
+    },
+    {
+      "id": "pWqsk1699004997740",
+      "author": "Patrick"
     }
   ],
   "twimps": [
@@ -55,6 +64,34 @@
       "by": "Author",
       "content": "«No temo a los ordenadores, lo que temo es quedarme sin ellos»\n\nIsaac Asimov",
       "timestamp": "2-11-2023"
+    },
+    {
+      "id": "4",
+      "author": "Oscuro",
+      "by": "Author",
+      "content": "«El software es un gas: se expande hasta llenar su contenedor»\n\nNathan Myhrvold",
+      "timestamp": "2-11-2023"
+    },
+    {
+      "id": "5",
+      "author": "Oscuro",
+      "by": "Author",
+      "content": "prueba twimp",
+      "timestamp": "3-11-2023"
+    },
+    {
+      "id": "6",
+      "author": "2",
+      "by": "Author",
+      "content": "s",
+      "timestamp": "3-11-2023"
+    },
+    {
+      "id": "7",
+      "author": "Patrick",
+      "by": "Author",
+      "content": "(Madison, 6 de junio de 1973) es un escritor estadounidense de fantasía y profesor adjunto de literatura y filología inglesa de la Universidad de Wisconsin",
+      "timestamp": "3-11-2023"
     }
   ],
   "author-favorites": [
@@ -67,7 +104,9 @@
     {
       "id": "2",
       "twimps": [
-        "Mx5Cf1483389903318"
+        "Mx5Cf1483389903318",
+        "3",
+        "2"
       ]
     },
     {
@@ -76,9 +115,12 @@
     },
     {
       "id": "Oscuro",
+      "twimps": []
+    },
+    {
+      "id": "Patrick",
       "twimps": [
-        "2",
-        "3"
+        "2"
       ]
     }
   ],

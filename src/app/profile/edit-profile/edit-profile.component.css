@@ -1,78 +1,81 @@
 .edit-profile_box {
-    width: 90%;
-    margin: 1em auto;
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.35);
-    padding: 3em;
-    min-height: 300px;
+  width: 90%;
+  margin: 1em auto;
+  background-color: #ebe2cd;
+  border-radius: 15px;
+  box-shadow: 0px 4px 5px 1px rgba(76, 81, 135, 0.55);
+  padding: 3em;
+  min-height: 300px;
 }
 
 .edit-profile_title {
-    text-align: center;
+  text-align: center;
 }
 
 .edit-profile_image {
-    margin: 0 auto 1em auto;
-    display: block;
-    width: 100%;
-    max-width: 150px;
-    border-radius: 50%;
+  margin: 0 auto 1em auto;
+  display: block;
+  width: 100%;
+  max-width: 150px;
+  border-radius: 50%;
 }
 
 .edit-profile_form_label {
-    font-size: 98%;
-    word-spacing: -0.4pt;
-    display: block;
-    margin: 20px auto;
-    width: 80%;
+  font-size: 98%;
+  word-spacing: -0.4pt;
+  display: block;
+  margin: 20px auto;
+  width: 80%;
+  font-weight: bold;
+  color: #1e295a;
 }
 
 .edit-profile_form_error {
-    font-size: 75%;
-    word-spacing: -0.4pt;
-    margin: 20px auto;
-    width: 80%;
-    color: red;
+  font-size: 75%;
+  word-spacing: -0.4pt;
+  margin: 20px auto;
+  width: 80%;
+  font-weight: bold;
+  color: red;
 }
 
 .edit-profile_form_input-text {
-    display: block;
-    padding: 10px;
-    margin: 20px auto;
-    font-size: 110%;
-    border: none;
-    border-bottom: solid 2px #c9c9c9;
-    transition: border 0.3s;
-    width: 60%;
+  display: block;
+  padding: 10px;
+  margin: 20px auto;
+  font-size: 110%;
+  border: none;
+  border-bottom: solid 2px #c9c9c9;
+  transition: border 0.3s;
+  width: 60%;
 }
 
 .edit-profile_form_input-text:focus {
-    border-bottom: solid 2px #969696;
+  border-bottom: solid 2px #969696;
 }
 
 .edit-profile_button {
-    width: 80%;
-    height: 50px;
-    background-color: #d94f5c;
-    margin: 30px auto 20px;
-    display: block;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-size: 110%;
-    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.35);
-    cursor: pointer;
+  width: 80%;
+  height: 50px;
+  background-color: #833500;
+  margin: 30px auto 20px;
+  display: block;
+  color: #F5ECD7;
+  border: none;
+  border-radius: 6px;
+  font-size: 110%;
+  box-shadow: 0px 4px 5px 1px rgba(76, 81, 135, 0.35);
+  cursor: pointer;
 }
 
 .edit-profile_button:hover {
-    transition: .35s ease-in-out;
-    background-color: #993333;
+  transition: .35s ease-in-out;
+  background-color: #F18F01;
 }
 
 .edit-profile_button:active {
-    transition: .35s ease-in-out;
-    background-color: #c64652;
+  transition: .35s ease-in-out;
+  background-color: #F18F01;
 }
 
 
@@ -84,9 +87,9 @@
    ------------------------------------------------------------------------- */
 
 @media (min-width: 768px) {
-    .edit-profile_box {
-        width: 60%;
-    }
+  .edit-profile_box {
+    width: 60%;
+  }
 }
 
 
