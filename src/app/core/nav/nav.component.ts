@@ -4,7 +4,7 @@ import { AuthenticationService } from '../authentication.service';
 @Component({
   selector: 'tweempus-nav',
   templateUrl: './nav.component.html',
-  styleUrls: ['./nav.component.css'],
+  styleUrls: ['./nav.component.scss'],
 })
 export class NavComponent {
   idAuthor: string | null = null;

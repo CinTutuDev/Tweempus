@@ -1,0 +1,54 @@
+@use "/src/styles.scss";
+
+.section_menu {
+  @if checkLogin() {
+    .menu_nav {
+      width: 100%;
+      background: styles.$bg-color;
+      overflow: hidden;
+      margin-bottom: 1.2em;
+      box-shadow: styles.$box-shadow;
+
+      .nav_list {
+        width: 100%;
+        overflow: hidden;
+        max-width: 1024px;
+        margin: 0 auto;
+
+        .nav_list_item {
+          display: inline-block;
+          width: 50%;
+          box-sizing: border-box;
+          float: left;
+          background-color: styles.$bg-color;
+          text-align: center;
+
+          .nav_list_link {
+            width: 100%;
+            font-weight: bold;
+            border-bottom: 4px solid styles.$bg-color;
+            display: inline-block;
+            float: left;
+            padding: 0.5em;
+            list-style-position: inside;
+            background-color: styles.$text-primary-100;
+            color: map-get(styles.$text, "text-secondary");
+            border-bottom: 4px solid map-get(styles.$text, "text-secondary");
+            margin-right: 0.2em;
+            font-weight: bold;
+            box-sizing: border-box;
+            text-align: center;
+            text-decoration: none;
+
+            &:hover,
+            &:focus,
+            .nav_list_item-selected & {
+              color: map-get(styles.$text, "text-nav");
+              border-color: map-get(styles.$text, "text-nav");
+            }
+          }
+        }
+      }
+    }
+  }
+}

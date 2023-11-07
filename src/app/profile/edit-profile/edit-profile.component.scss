@@ -1,0 +1,95 @@
+@use "/src/styles.scss";
+
+.section_edit-profile {
+  .edit-profile_box {
+    width: 90%;
+    margin: 1em auto;
+    background-color: map-get(styles.$text, "text-secondary");
+    border-radius: 15px;
+    box-shadow: styles.$box-shadow-icon;
+    padding: 3em;
+    min-height: 300px;
+
+    .edit-profile_title {
+      text-align: center;
+    }
+
+    .edit-profile_image {
+      margin: 0 auto 1em auto;
+      display: block;
+      width: 100%;
+      max-width: 150px;
+      border-radius: 50%;
+    }
+
+    .edit-profile_form_label {
+      font-size: 98%;
+      word-spacing: -0.4pt;
+      display: block;
+      margin: 20px auto;
+      width: 80%;
+      font-weight: bold;
+      color: styles.$text-primary-100;
+    }
+
+    .edit-profile_form_error {
+      font-size: 75%;
+      word-spacing: -0.4pt;
+      margin: 20px auto;
+      width: 80%;
+      font-weight: bold;
+      color: map-get(styles.$text, "text-error");
+    }
+
+    .edit-profile_form_input-text {
+      display: block;
+      padding: 10px;
+      margin: 20px auto;
+      font-size: 110%;
+      border: none;
+      border-bottom: solid 2px styles.$border-btn;
+      transition: border 0.3s;
+      width: 60%;
+
+      &:focus {
+        border-bottom: solid 2px styles.$border-btn-focus;
+      }
+    }
+
+    .edit-profile_button {
+      width: 80%;
+      height: 50px;
+      background-color: map-get(styles.$buttons, "bg-buttons");
+      margin: 30px auto 20px;
+      display: block;
+      color: styles.$bg-color;
+      border: none;
+      border-radius: 6px;
+      font-size: 110%;
+      box-shadow: styles.$box-shadow;
+      cursor: pointer;
+
+      &:hover,
+      &:active {
+        @include styles.btn(0.35s ease-in-out, "bg-buttons-hover");
+      }
+    }
+  }
+
+  /* RESPONSIVE
+     ========================================================================= */
+
+  @media (min-width: 768px) {
+    .edit-profile_box {
+      width: 60%;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    /* Estilos para tablets en horizontal y escritorios normales */
+  }
+
+  @media (min-width: 1200px) {
+    /* Estilos para escritorios muy anchos */
+  }
+}

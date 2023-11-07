@@ -11,7 +11,7 @@ import { Twimp } from 'src/app/shared/twimp/twimp.model';
 @Component({
   selector: 'tweempus-favorite-twimps',
   templateUrl: './favorite-twimps.component.html',
-  styleUrls: ['./favorite-twimps.component.css'],
+  styleUrls: ['./favorite-twimps.component.scss'],
 })
 export class FavoriteTwimpsComponent implements OnInit {
   twimpList: Twimp[] = [];

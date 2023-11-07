@@ -11,7 +11,7 @@ import {
 @Component({
   selector: 'tweempus-signup',
   templateUrl: './signup.component.html',
-  styleUrls: ['./signup.component.css'],
+  styleUrls: ['./signup.component.scss'],
 })
 export class SignupComponent implements OnInit {
   newUserForm!: FormGroup;
@@ -20,13 +20,14 @@ export class SignupComponent implements OnInit {
   constructor(
     private authService: AuthenticationService,
     private authorService: AuthorService,
-    private fb: FormBuilder) { }
+    private fb: FormBuilder
+  ) {}
 
   ngOnInit() {
     this.newUserForm = this.fb.group({
       idAuthor: ['', [Validators.required, this.checkNick]],
       fullName: ['', [Validators.required, Validators.minLength(3)]],
-      image: ['']
+      image: [''],
     });
   }
 
@@ -36,7 +37,7 @@ export class SignupComponent implements OnInit {
     if (regexp.test(nick)) {
       return null;
     } else {
-      return { 'invalidNick': true };
+      return { invalidNick: true };
     }
   }
 
@@ -45,14 +46,16 @@ export class SignupComponent implements OnInit {
       this.userAlreadyExist = false;
     }
     this.authorService.getAuthor(form.value.idAuthor).subscribe(
-      author => this.userAlreadyExist = true,
-      error => {
-        this.authorService.setAuthor(form.value.idAuthor, form.value.fullName, form.value.image).subscribe(
-          response => this.authorService.createFavorite(response['id']).subscribe(
-            response => this.authService.login(response['id'])
-          )
-        )
+      (author) => (this.userAlreadyExist = true),
+      (error) => {
+        this.authorService
+          .setAuthor(form.value.idAuthor, form.value.fullName, form.value.image)
+          .subscribe((response) =>
+            this.authorService
+              .createFavorite(response['id'])
+              .subscribe((response) => this.authService.login(response['id']))
+          );
       }
-    )
+    );
   }
 }

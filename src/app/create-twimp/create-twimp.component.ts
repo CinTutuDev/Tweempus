@@ -15,7 +15,7 @@ import { Twimp } from '../shared/twimp/twimp.model';
 @Component({
   selector: 'tweempus-create-twimp',
   templateUrl: './create-twimp.component.html',
-  styleUrls: ['./create-twimp.component.css'],
+  styleUrls: ['./create-twimp.component.scss'],
 })
 export class CreateTwimpComponent implements OnInit {
   newTwimpForm!: FormGroup;

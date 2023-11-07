@@ -7,7 +7,7 @@ import { Author } from '../shared/author/author.model';
 @Component({
   selector: 'tweempus-profile',
   templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.css']
+  styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent {
   idAuthor: string | null = null;

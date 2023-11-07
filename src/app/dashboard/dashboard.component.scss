@@ -1,0 +1,30 @@
+@use "/src/styles.scss";
+
+section.main.section_dashboard {
+  section {
+    a.dashboard_create_icon {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      width: 50px;
+      height: 50px;
+      background-color: map-get(styles.$buttons, "bg-buttons");
+      @include styles.icon(0.35s ease-in-out, styles.$bg-color);
+      border-radius: 50%;
+      text-align: center;
+      line-height: 50px;
+      font-weight: bold;
+      box-shadow: styles.$box-shadow-icon;
+      font-size: 25px;
+      text-decoration: none;
+
+      &:hover {
+        @include styles.icon(0.35s ease-in-out, styles.$bg-color);
+        box-shadow: styles.$box-shadow-icon;
+        width: 52px;
+        height: 52px;
+        font-size: 26px;
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@use "/src/styles.scss";
+
+.section-header {
+  width: 100%;
+  background: styles.$bg-color;
+
+  .header_title {
+    margin: 0;
+    margin-top: 5px;
+    padding: 0.5em 3em 0;
+    color: styles.$text-primary-100;
+    background: styles.$imagen-logo;
+    min-height: 60px;
+    text-indent: -9999px;
+  }
+
+  .header_auth {
+    position: absolute;
+    top: 13px;
+    right: 15px;
+    font-weight: bold;
+    color: styles.$text-primary-100;
+    border: none;
+    background-color: styles.$bg-color;
+  }
+}

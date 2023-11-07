@@ -11,7 +11,7 @@ import { AuthorService } from '../shared/author/author.service';
 @Component({
   selector: 'tweempus-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css'],
+  styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
   /*  nuevo user */

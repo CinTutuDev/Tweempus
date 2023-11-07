@@ -1,28 +1,30 @@
+@use '/src/styles.scss';
+
 .profile_edit_icon {
   position: fixed;
   bottom: 10px;
   right: 10px;
   width: 50px;
   height: 50px;
-  background-color: #833500;
+  background-color: map-get(styles.$buttons, 'bg-buttons' );
   border-radius: 50%;
   text-align: center;
   line-height: 50px;
   font-weight: bold;
-  color: #F5ECD7;
-  box-shadow: 0px 4px 5px 1px rgba(76, 81, 135, 0.55);
+  color:styles.$bg-color;
+  box-shadow:styles.$box-shadow-icon;
   transition: .35s ease-in-out;
   font-size: 25px;
   text-decoration: none;
 }
 
 .profile_edit_icon:hover {
-  box-shadow: 0px 4px 5px 1px rgba(76, 81, 135, 0.55);
+  box-shadow:styles.$box-shadow-icon;
   transition: .35s ease-in-out;
   width: 52px;
   height: 52px;
   font-size: 26px;
-  color: #F5ECD7;
+  color:styles.$bg-color;
 }
 
 /* RESPONSIVE

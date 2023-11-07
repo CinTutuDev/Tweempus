@@ -6,7 +6,7 @@ import { TwimpService } from '../twimp.service';
 @Component({
   selector: 'tweempus-twimp-card',
   templateUrl: './twimp-card.component.html',
-  styleUrls: ['./twimp-card.component.css'],
+  styleUrls: ['./twimp-card.component.scss'],
 })
 export class TwimpCardComponent {
   @Input() twimp!: Twimp;

@@ -1,0 +1,62 @@
+@use "/src/styles.scss";
+
+.section_create_twimp {
+  .create_twimp_box {
+    width: 90%;
+    margin: 1em auto;
+    background-color: map-get(styles.$text, "text-secondary");
+    border-radius: 15px;
+    box-shadow: styles.$box-shadow;
+    padding: 3em;
+    min-height: 300px;
+
+    .create_twimp_label,
+    .create_twimp_textarea {
+      display: block;
+      margin: 15px auto;
+      resize: vertical;
+    }
+
+    .create_twimp_label {
+      width: 70%;
+      font-weight: bold;
+      color: styles.$text-primary-100;
+    }
+
+    .create_twimp_textarea {
+      height: 100px;
+      width: 75%;
+    }
+
+    .create_twimp_error {
+      font-size: 75%;
+      word-spacing: -0.4pt;
+      margin: 20px auto;
+      width: 80%;
+      font-weight: bold;
+      color: map-get(styles.$text, "text-error");
+    }
+
+    .create_twimp_button {
+      width: 80%;
+      height: 50px;
+      background-color: map-get(styles.$buttons, "bg-buttons");
+      margin: 30px auto 20px;
+      display: block;
+      color: styles.$bg-color;
+      border: none;
+      border-radius: 6px;
+      font-size: 110%;
+      box-shadow: styles.$box-shadow;
+      cursor: pointer;
+
+      &:hover {
+        @include styles.btn(0.35s ease-in-out, "bg-buttons-hover");
+      }
+
+      &:active {
+        @include styles.btn(0.35s ease-in-out, "bg-buttons-hover");
+      }
+    }
+  }
+}
