@@ -20,6 +20,7 @@ Para construir el proyecto `ng build` to build the project. Se almacenarán en l
 ### Hosting GitHub 👉  : [AngularComponentBasic](https://cintutudev.github.io/AngularComponentBasic) 
 ### Flexbox  👉 : [Conceptos básicos](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
 ### HostListener  👉 : [HostListener](https://angular.io/api/core/HostListener)
+### npmjs 👉 : [Migrar de css a scss](https://www.npmjs.com/package/schematics-scss-migrate)
 
 ## 🎮Comandos
 * Crear proyecto con prefijo para especificar todos los componentes que se van ha crear
