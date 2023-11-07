@@ -24,6 +24,11 @@
       "id": "Patrick",
       "fullName": " Rothfuss",
       "image": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Patrick_Rothfuss.jpg"
+    },
+    {
+      "id": "Harry",
+      "fullName": "joel dicker",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqTMChtPv4GUEPvXi2YHaKTse1mx7uSOE0OHictyh4lEoOvSP5RrFX7_CH7wuHv7Yolog&usqp=CAU"
     }
   ],
   "authenticated": [
@@ -34,6 +39,14 @@
     {
       "id": "ZjjFT1699351246848",
       "author": "2"
+    },
+    {
+      "id": "GuIlL1699353790502",
+      "author": "Oscuro"
+    },
+    {
+      "id": "WZPGW1699359957203",
+      "author": "Harry"
     }
   ],
   "twimps": [
@@ -92,6 +105,27 @@
       "by": "Author",
       "content": "(Madison, 6 de junio de 1973) es un escritor estadounidense de fantasía y profesor adjunto de literatura y filología inglesa de la Universidad de Wisconsin",
       "timestamp": "3-11-2023"
+    },
+    {
+      "id": "8",
+      "author": "Harry",
+      "by": "Author",
+      "content": "La verdad sobre el caso Harry Quebert (Best Seller)",
+      "timestamp": "7-11-2023"
+    },
+    {
+      "id": "9",
+      "author": "Patrick",
+      "by": "Author",
+      "content": "📚El nombre del viento\n📚El temor de un hombre sabio\n📚La música del silencio\n... Las puertas de piedra (The Doors of Stone, título no definitivo, por publicarse).",
+      "timestamp": "7-11-2023"
+    },
+    {
+      "id": "10",
+      "author": "Harry",
+      "by": "Author",
+      "content": "Libros: El tigre (Le tigre, 2005). La verdad sobre el caso Harry Quebert (La vérité sur l’affaire Harry Quebert, 2012), El libro de los Baltimore (Le livre des Baltimore, 2015). La desaparición de Stephanie Mailer. El enigma de la habitación 622. El caso Alaska Sanders.",
+      "timestamp": "7-11-2023"
     }
   ],
   "author-favorites": [
@@ -107,7 +141,8 @@
         "Mx5Cf1483389903318",
         "3",
         "7",
-        "2"
+        "2",
+        "8"
       ]
     },
     {
@@ -116,13 +151,25 @@
     },
     {
       "id": "Oscuro",
-      "twimps": []
+      "twimps": [
+        "7"
+      ]
     },
     {
       "id": "Patrick",
       "twimps": [
         "2",
-        "7"
+        "7",
+        "5",
+        "9"
+      ]
+    },
+    {
+      "id": "Harry",
+      "twimps": [
+        "7",
+        "5",
+        "10"
       ]
     }
   ],

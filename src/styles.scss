@@ -27,6 +27,13 @@ $text: (
   transition: $transition;
   background-color: map-get($buttons, $btn-name);
 }
+
+@mixin text($transition, $text-name) {
+  transition: $transition;
+  background-color: map-get($text, $text-name);
+}
+
+
 @mixin icon($transition, $bg-color) {
   transition: $transition;
   color: $bg-color;

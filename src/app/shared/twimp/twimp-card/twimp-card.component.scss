@@ -1,6 +1,8 @@
+@use "/src/styles.scss";
+
 .twimp {
-  background-color: #ebe2cd;
-  color: #353535;
+  background-color: map-get(styles.$text, "text-secondary");
+  color: map-get(styles.$text, "text-twimp");
   font-weight: bold;
   font-size: large;
   position: relative;
@@ -8,87 +10,83 @@
   margin: 0 1em 1em 1em;
   box-sizing: border-box;
   max-width: 768px;
-}
 
-.twimp_header {
-  width: 100%;
-  height: 100px;
-}
+  .twimp_header {
+    width: 100%;
+    height: 100px;
 
-.twimp_header_img {
-  width: 60px;
-  border-radius: 50%;
-  position: absolute;
-  top: 20px;
-  left: 20px;
-}
+    .twimp_header_img {
+      width: 60px;
+      border-radius: 50%;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
 
-.twimp_header_name {
-  position: absolute;
-  left: 100px;
-  top: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 120%;
-}
+    .twimp_header_name {
+      position: absolute;
+      left: 100px;
+      top: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 120%;
+      color: styles.$border;
+    }
 
-.twimp_header_date {
-  position: absolute;
-  left: 100px;
-  top: 55px;
-  font-size: 80%;
-}
+    .twimp_header_date {
+      position: absolute;
+      left: 100px;
+      top: 55px;
+      font-size: 80%;
+    }
+  }
 
-.twimp_content {
-  width: 90%;
-  margin: 0 auto 2em;
-}
+  .twimp_content {
+    width: 90%;
+    margin: 0 auto 2em;
+  }
 
-.twimp_line {
-  width: 90%;
-  margin: 0 auto;
-  border: 0;
-  color: #ebe2cd;
-  border-bottom: 4px solid #ebe2cd;
-  margin-top: 0.5em;
-}
+  .twimp_line {
+    width: 90%;
+    margin: 0 auto;
+    border: 0;
+    color: map-get(styles.$text, "text-secondary");
+    border-bottom: 4px solid map-get(styles.$text, "text-secondary");
+    margin-top: 0.5em;
+  }
 
-.twimp_fav {
-  width: 100%;
-  box-sizing: border-box;
-  text-align: center;
-  padding: 1em;
-}
+  .twimp_fav {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 1em;
 
-.fav_icon {
-  color:#abacea;
-  text-decoration: none;
-  font-size: 20px;
-  transition: .35s ease-in-out
-}
+    .fav_icon {
+      color: map-get(styles.$text, "text-nav");
+      text-decoration: none;
+      font-size: 20px;
+      transition: 0.35s ease-in-out;
 
-.fav_icon-selected, .fav_icon:hover {
-  color: #F18F01;
-  font-weight: bold;
-  font-size: 35px;
-  transition: .35s ease-in-out;
-}
+      &.fav_icon-selected,
+      &:hover {
+        color: map-get(styles.$buttons, "bg-buttons-hover");
+        font-weight: bold;
+        font-size: 35px;
+        transition: 0.35s ease-in-out;
+      }
 
-.fav_icon-selected, .fav_icon-selected:active {
-  font-size: 30px;
-  transition: .35s ease-in-out
-}
+      &.fav_icon-selected,
+      &.fav_icon-selected:active {
+        font-size: 30px;
+        transition: 0.35s ease-in-out;
+      }
+    }
+  }
 
+  /* RESPONSIVE
+     ========================================================================= */
 
-/* RESPONSIVE
- ========================================================================= */
-
-
-/* Moviles en horizontal o tablets en vertical
- ------------------------------------------------------------------------- */
-
-@media (min-width: 768px) {
-  .twimp {
-      margin: 0 auto 1em auto;
+  @media (min-width: 768px) {
+    margin: 0 auto 1em auto;
   }
 }
