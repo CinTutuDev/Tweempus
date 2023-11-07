@@ -1,11 +1,12 @@
- # 🅰Módulo 2 del curso con Angular16: Proyecto del curso Cluster Tic Galicia
+ # 🅰Curso con Angular16: Proyecto del curso Cluster Tic Galicia
+ # 🤘Impartido por: David García Valiñas
  # <p align="center"> <img src="https://readme-typing-svg.demolab.com?font=Libre+Baskerville&size=45&duration=3100&pause=500&color=1e295a&center=true&vCenter=true&width=940&lines=Tweempus" align="middle" alt="Tweempus" width="100%"/>![100px](Tweempus/../src/assets/images/TwLoginDark.png) 
  </p> 
 
  # <p align="center"> Proyecto realizado con ![angular](https://user-images.githubusercontent.com/71487857/212993270-3cf1454e-f0d7-4164-bc01-20d5fe6469cd.png)Angular16</p> 
 
 ## 🐦 Sitio Web
-### Hosting URL: 
+### Hosting URL: [Tweempus](https://tweempus.netlify.app/)  
 
 ## 🏍 Servidor
 
