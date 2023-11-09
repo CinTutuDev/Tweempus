@@ -1,25 +1,76 @@
 <section class="section_edit-profile">
-
   <div class="edit-profile_box rubberBand">
-    <img class="edit-profile_image" src="assets/images/google-icon.png">
-    <form class="edit-profile_form" [formGroup]="editUserForm" (ngSubmit)="editProfile(editUserForm)">
+    <div class="author_data">
+      <div
+        class="author_data_img_wrap"
+        *ngIf="editUserForm.get('image')!.value"
+      >
+        <img
+          class="edit-profile_image"
+          [src]="editUserForm.get('image')!.value"
+          alt="Vista previa de la imagen"
+        />
+      </div>
+
+      <div class="author_data_name">
+        {{ author?.fullName }}
+      </div>
+    </div>
+
+    <form
+      class="edit-profile_form"
+      [formGroup]="editUserForm"
+      (ngSubmit)="editProfile(editUserForm)"
+    >
+      <label class="edit-profile_form_label"
+        >Actualiza tu nombre y añade tu nueva imagen:</label
+      >
+
       <!-- FULL NAME -->
-      <label class="edit-profile_form_label">Introduce tu nombre:*</label>
-      <div class="edit-profile_form_error" *ngIf="editUserForm.get('fullName')!.hasError('required') && !editUserForm.get('fullName')!.pristine">
+      <label class="edit-profile_form_label">Actualiza tu nombre:*</label>
+      <div
+        class="edit-profile_form_error"
+        *ngIf="
+          editUserForm.get('fullName')!.hasError('required') &&
+          !editUserForm.get('fullName')!.pristine
+        "
+      >
         El nombre es obligatorio
       </div>
-      <div class="edit-profile_form_error" *ngIf="editUserForm.get('fullName')!.hasError('minlength') && !editUserForm.get('fullName')!.pristine">
-        Tu nombre debe tener como mínimo 3 carácteres
+      <div
+        class="edit-profile_form_error"
+        *ngIf="
+          editUserForm.get('fullName')!.hasError('minlength') &&
+          !editUserForm.get('fullName')!.pristine
+        "
+      >
+        Tu nombre debe tener como mínimo 3 caracteres
       </div>
-      <input type="text" class="edit-profile_form_input-text" formControlName="fullName">
-      <!-- FULL NAME -->
+      <input
+        type="text"
+        class="edit-profile_form_input-text"
+        formControlName="fullName"
+      />
 
       <!-- IMAGE -->
-      <label class="edit-profile_form_label">Añade una URL para tu imagen de perfil:</label>
-      <input type="url" class="edit-profile_form_input-text" formControlName="image">
+      <label class="edit-profile_form_label"
+        >Añade una nueva URL para tu imagen de perfil:</label
+      >
+      <input
+        type="url"
+        class="edit-profile_form_input-text"
+        formControlName="image"
+        (input)="updatePreview()"
+      />
       <!-- IMAGE -->
-      <button type="submit" class="edit-profile_button" [disabled]="editUserForm.invalid">Registrarme</button>
+
+      <button
+        type="submit"
+        class="edit-profile_button"
+        [disabled]="editUserForm.invalid"
+      >
+        Guardar Cambios
+      </button>
     </form>
   </div>
-
 </section>

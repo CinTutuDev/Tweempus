@@ -23,6 +23,8 @@
       width: 100%;
       max-width: 140px;
       max-height: 140px;
+      object-fit: cover;
+      object-position: center top;
       border: 5px solid styles.$border;
       margin: 1rem;
       position: absolute;

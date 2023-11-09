@@ -19,7 +19,9 @@
       display: block;
       width: 100%;
       max-width: 150px;
-      border-radius: 50%;
+      height: 150px;
+      object-fit: cover;
+      border-radius:  15px;
     }
 
     .edit-profile_form_label {

@@ -17,6 +17,9 @@
 
     .twimp_header_img {
       width: 60px;
+      height: 60px;
+      object-fit: cover;
+      object-position: center top;
       border-radius: 50%;
       position: absolute;
       top: 20px;
