@@ -22,7 +22,7 @@ export class AuthenticationService {
   ) {
     const token = localStorage.getItem('token');
     if (token != null) {
-      let tokenLS = JSON.parse(token);
+      const tokenLS = JSON.parse(token);
       this.token = new Token(tokenLS['_key'], tokenLS['_idAuthor']);
     }
   }

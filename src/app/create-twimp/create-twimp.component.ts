@@ -34,13 +34,13 @@ export class CreateTwimpComponent implements OnInit {
 
   createTwimp(form: any) {
     this.twimpS.getTwimps().subscribe((response) => {
-      let twimpDate: string = new Date()
+      const twimpDate: string = new Date()
         .toLocaleDateString()
         .replace(/\//g, '-');
-      let author: Author = new Author(
+      const author: Author = new Author(
         this.authService.token!.idAuthor
       );
-      let twimp: Twimp = new Twimp(
+      const twimp: Twimp = new Twimp(
         response.length.toString(),
         '',
         author,

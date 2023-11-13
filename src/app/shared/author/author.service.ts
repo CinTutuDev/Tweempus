@@ -33,7 +33,7 @@ export class AuthorService {
     fullName: string,
     image: string
   ): Observable<any> {
-    let dbAuthor: any = { id: idAuthor, fullName: fullName, image: image };
+    const dbAuthor: any = { id: idAuthor, fullName: fullName, image: image };
 
     return this.httpClient
       .post(this.url, dbAuthor)
@@ -45,7 +45,7 @@ export class AuthorService {
     fullName: string,
     image: string
   ): Observable<any> {
-    let dbAuthor: any = { id: idAuthor, fullName: fullName, image: image };
+    const dbAuthor: any = { id: idAuthor, fullName: fullName, image: image };
 
     return this.httpClient
       .patch(this.url + "/" + idAuthor, dbAuthor)
@@ -53,7 +53,7 @@ export class AuthorService {
   }
 
   createFavorite(idAuthor: string): Observable<any> {
-    let dbAuthorFav: any = { id: idAuthor, twimps: [] };
+    const dbAuthorFav: any = { id: idAuthor, twimps: [] };
 
     return this.httpClient
       .post(this.urlFavorite, dbAuthorFav)
@@ -61,7 +61,7 @@ export class AuthorService {
   }
 
   handleError(error: any) {
-    let errMsg = error.message
+    const errMsg = error.message
       ? error.message
       : error.status
       ? `${error.status} - ${error.statusText}`

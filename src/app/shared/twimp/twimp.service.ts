@@ -19,12 +19,12 @@ export class TwimpService {
   constructor(private httpClient: HttpClient) { }
 
   getTwimps(): Observable<Twimp[]> {
-    let twimps: Twimp[] = [];
+    const twimps: Twimp[] = [];
 
     return this.httpClient.get(this.url).pipe(
       map((dbTwimpList: any) => {
-        for (let i in dbTwimpList) {
-          let twimp: Twimp = new Twimp(dbTwimpList[i].id, 'localhost:4200/twimp/' + dbTwimpList[i].id, new Author(dbTwimpList[i].author), dbTwimpList[i].content, dbTwimpList[i].timestamp);
+        for (const i in dbTwimpList) {
+          const twimp: Twimp = new Twimp(dbTwimpList[i].id, 'localhost:4200/twimp/' + dbTwimpList[i].id, new Author(dbTwimpList[i].author), dbTwimpList[i].content, dbTwimpList[i].timestamp);
           twimps.push(twimp);
         }
         return twimps;
@@ -34,13 +34,13 @@ export class TwimpService {
   }
 
   getAuthorTwimps(idAuthor: string): Observable<Twimp[]> {
-    let twimps: Twimp[] = [];
+    const twimps: Twimp[] = [];
 
     return this.httpClient.get(this.url).pipe(
       map((dbTwimpList: any) => {
-        for (let i in dbTwimpList) {
+        for (const i in dbTwimpList) {
           if (dbTwimpList[i].author === idAuthor) {
-            let twimp: Twimp = new Twimp(dbTwimpList[i].id, 'localhost:4200/twimp/' + dbTwimpList[i].id, new Author(dbTwimpList[i].author), dbTwimpList[i].content, dbTwimpList[i].timestamp);
+            const twimp: Twimp = new Twimp(dbTwimpList[i].id, 'localhost:4200/twimp/' + dbTwimpList[i].id, new Author(dbTwimpList[i].author), dbTwimpList[i].content, dbTwimpList[i].timestamp);
             twimps.push(twimp);
           }
         }
@@ -51,7 +51,7 @@ export class TwimpService {
   }
 
   setTwimp(twimp: Twimp): Observable<any> {
-    let dbTwimp: any = {
+    const dbTwimp: any = {
       'id': twimp.id,
       'author': twimp.author.id,
       'by': twimp.author.fullName,
@@ -67,7 +67,7 @@ export class TwimpService {
   getFavoritesByAuthor(idAuthor: string, idTwimp: string): Observable<boolean> {
     return this.httpClient.get(this.urlFavorite + '/' + idAuthor).pipe(
       map((response: any) => {
-        let favorites: string[] = response['twimps'];
+        const favorites: string[] = response['twimps'];
         if (favorites.indexOf(idTwimp) == -1) {
           return false;
         } else {
@@ -88,7 +88,7 @@ export class TwimpService {
   }
 
   setFavoriteTwimps(idAuthor: string, twimpList: any): Observable<any> {
-    let dbFavoriteTwimps: any = {
+    const dbFavoriteTwimps: any = {
       'id': idAuthor,
       'twimps': twimpList
     };
@@ -99,7 +99,7 @@ export class TwimpService {
   }
 
   handleError(error: any) {
-    let errMsg = (error.message) ? error.message :
+    const errMsg = (error.message) ? error.message :
       error.status ? `${error.status} - ${error.statusText}` : 'Server error';
     console.error(errMsg);
     return throwError(() => errMsg);
