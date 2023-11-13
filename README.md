@@ -117,6 +117,8 @@ Quisiera expresar mi sincero agradecimiento a las siguientes personas y platafor
 
 ### Cluster Tic Galicia
 - 🌐 Agradezco a [Cluster Tic Galicia](https://formacion.clusterticgalicia.com/) por brindarme la oportunidad de participar en esta acción formativa y contribuir a mi crecimiento profesional.
-- 
+<div align="center">
+ <img src="https://github.com/argyleink/transition.css/blob/main/gif/wipe-up.gif?raw=true" />
+</div>
  ¡Gracias por su apoyo continuo!
 
