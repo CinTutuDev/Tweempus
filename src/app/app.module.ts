@@ -14,6 +14,7 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { TranslocoRootModule } from './transloco-root.module';
 /* import { LogInterceptor } from './interceptors/log-interceptor'; */
 import { CreateTwimpModule } from './create-twimp/create-twimp.module';
+import { ErrorModule } from './error/error.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -24,7 +25,9 @@ import { CreateTwimpModule } from './create-twimp/create-twimp.module';
     LoginModule,
     ProfileModule,
     DashboardModule,
-    CreateTwimpModule
+    CreateTwimpModule,
+    TranslocoRootModule,
+    ErrorModule
   ],
   providers: [],
   bootstrap: [AppComponent],

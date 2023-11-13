@@ -23,11 +23,11 @@
       (ngSubmit)="editProfile(editUserForm)"
     >
       <label class="edit-profile_form_label"
-        >Actualiza tu nombre y añade tu nueva imagen:</label
+        >{{ "EditProfile" | transloco}}</label
       >
 
       <!-- FULL NAME -->
-      <label class="edit-profile_form_label">Actualiza tu nombre:*</label>
+      <label class="edit-profile_form_label">{{ "UpdateName" | transloco }}</label>
       <div
         class="edit-profile_form_error"
         *ngIf="
@@ -35,7 +35,7 @@
           !editUserForm.get('fullName')!.pristine
         "
       >
-        El nombre es obligatorio
+        {{"Errors.NotName" | transloco}}
       </div>
       <div
         class="edit-profile_form_error"
@@ -44,7 +44,7 @@
           !editUserForm.get('fullName')!.pristine
         "
       >
-        Tu nombre debe tener como mínimo 3 caracteres
+      {{"Errors.NameLenght" | transloco}}
       </div>
       <input
         type="text"
@@ -54,7 +54,7 @@
 
       <!-- IMAGE -->
       <label class="edit-profile_form_label"
-        >Añade una nueva URL para tu imagen de perfil:</label
+        >{{"NewUrlImage" | transloco}}</label
       >
       <input
         type="url"
@@ -69,7 +69,7 @@
         class="edit-profile_button"
         [disabled]="editUserForm.invalid"
       >
-        Guardar Cambios
+        {{"SaveChange" | transloco}}
       </button>
     </form>
   </div>

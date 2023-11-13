@@ -1,0 +1,19 @@
+<section class="section_menu">
+  <nav class="menu_nav">
+    <ul class="nav_list" class="tranlator" >
+       <!-- Language Selector -->
+       <li class="nav_list_item"  (click)="toggleLanguageMenu()">
+        <a class="nav_list_link">
+         <i class="fas fa-globe"></i>
+          {{ "LANGUAGE" | transloco }}
+        </a>
+
+        <!-- Language Menu -->
+        <ul class="language-menu" *ngIf="showLanguageMenu">
+          <li (click)="clickTranslate('en')" class="en">English</li>
+          <li (click)="clickTranslate('es')" class="es">Español</li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</section>

@@ -1,5 +1,6 @@
 <section class="section-header">
 	<h2 class="header_title" routerLink="/dashboard">Tweempus</h2>
-	<button class="header_auth" *ngIf="!checkLogin()" routerLink="/signup">Regístrate</button>
-	<button class="header_auth" *ngIf="checkLogin()" (click)="logOut()">Cerrar Sesión</button>
+	<button class="header_auth" *ngIf="!checkLogin()" routerLink="/signup">{{"CheckIn" | transloco}}</button>
+  <tweempus-translator class="header_translator"></tweempus-translator>
+	<button class="header_auth" *ngIf="checkLogin()" (click)="logOut()">{{"SignOff" | transloco}}</button>
 </section>

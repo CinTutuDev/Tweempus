@@ -7,7 +7,7 @@
       (ngSubmit)="signUp(newUserForm)"
     >
       <!-- NICK -->
-      <label class="signup_form_label">Introduce tu nick:*</label>
+      <label class="signup_form_label">{{ "NickName" | transloco }}</label>
       <div
         class="signup_form_error"
         *ngIf="
@@ -15,7 +15,7 @@
           !newUserForm.get('idAuthor')!.pristine
         "
       >
-        El nick es obligatorio
+       {{"Errors.NotNickName" | transloco}}
       </div>
       <div
         class="signup_form_error"
@@ -24,10 +24,10 @@
           !newUserForm.get('idAuthor')!.pristine
         "
       >
-        El nick sólo puede contener números y letras
+      {{"Errors.LetterNumber" | transloco}}
       </div>
       <div class="signup_form_error" *ngIf="userAlreadyExist">
-        Ya existe un usuario con este nick
+        {{"Errors.AlreadyExist" | transloco}}
       </div>
       <input
         type="text"
@@ -37,7 +37,7 @@
       <!-- NICK -->
 
       <!-- FULL NAME -->
-      <label class="signup_form_label">Introduce tu nombre:*</label>
+      <label class="signup_form_label">{{ "NameCheck" | transloco }}</label>
       <div
         class="signup_form_error"
         *ngIf="
@@ -45,7 +45,7 @@
           !newUserForm.get('fullName')!.pristine
         "
       >
-        El nombre es obligatorio
+      {{"Errors.NotName" | transloco}}
       </div>
       <div
         class="signup_form_error"
@@ -54,7 +54,7 @@
           !newUserForm.get('fullName')!.pristine
         "
       >
-        Tu nombre debe tener como mínimo 3 carácteres
+      {{"Errors.NameLenght" | transloco}}
       </div>
       <input
         type="text"
@@ -65,7 +65,7 @@
 
       <!-- IMAGE -->
       <label class="signup_form_label"
-        >Añade una URL para tu imagen de perfil:</label
+        >{{ "UrlImage" | transloco }}</label
       >
       <input
         type="url"
@@ -78,7 +78,7 @@
         class="signup_button"
         [disabled]="newUserForm.invalid"
       >
-        Registrarme
+        {{"Check" | transloco}}
       </button>
     </form>
   </div>

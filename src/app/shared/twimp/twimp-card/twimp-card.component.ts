@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Twimp } from '../twimp.model';
 import { AuthenticationService } from 'src/app/core/authentication.service';
 import { TwimpService } from '../twimp.service';
+import { TranslocoService } from '@ngneat/transloco';
 
 @Component({
   selector: 'tweempus-twimp-card',
@@ -13,11 +14,15 @@ export class TwimpCardComponent {
 
   constructor(
     private authService: AuthenticationService,
-    private twimpService: TwimpService) { }
+    private twimpService: TwimpService,
+    private translocoService: TranslocoService) { }
 
   setFavoriteTwimp() {
     this.twimpService.getFavoritesTwimps(this.authService.token!.idAuthor).subscribe(
       twimps => {
+        const successMessage = this.twimp.favorite
+      ? this.translocoService.translate('FavoriteAdded')
+      : this.translocoService.translate('FavoriteRemoved')
         console.log(twimps);
         if (twimps.indexOf(this.twimp.id) != -1) {
           twimps = twimps.filter((value: any) => {
@@ -31,7 +36,8 @@ export class TwimpCardComponent {
           this.twimp.favorite = true;
         }
         this.twimpService.setFavoriteTwimps(this.authService.token!.idAuthor, twimps).subscribe(
-          response => console.log(response)
+          response => console.log(response),
+
         );
       }
     );

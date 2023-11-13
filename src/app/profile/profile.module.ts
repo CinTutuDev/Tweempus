@@ -8,6 +8,7 @@ import { FavoriteTwimpsComponent } from './favorite-twimps/favorite-twimps.compo
 import { MyTwimpsComponent } from './my-twimps/my-twimps.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
+import { TranslocoRootModule } from '../transloco-root.module';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
     SharedModule,
     ProfileRoutingModule,
     ReactiveFormsModule,
+    TranslocoRootModule
   ],
 })
 export class ProfileModule {}

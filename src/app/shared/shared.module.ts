@@ -9,15 +9,23 @@ import { TwimpListComponent } from './twimp/twimp-list/twimp-list.component';
 import { AuthorService } from './author/author.service';
 import { TwimpService } from './twimp/twimp.service';
 import { SortByPipe } from './sort-by.pipe';
-
+import { TranslatorComponent } from './translator/translator.component';
+import { TranslocoRootModule } from '../transloco-root.module';
 
 @NgModule({
-  declarations: [TwimpCardComponent, TwimpListComponent, AuthorCardComponent, SortByPipe],
-  imports: [CommonModule, RouterModule],
+  declarations: [
+    TwimpCardComponent,
+    TwimpListComponent,
+    AuthorCardComponent,
+    SortByPipe,
+    TranslatorComponent,
+  ],
+  imports: [CommonModule, RouterModule, TranslocoRootModule],
   exports: [
     TwimpCardComponent,
     TwimpListComponent,
     AuthorCardComponent,
+    TranslatorComponent,
     RouterModule,
   ],
   /* Array de los servicios */

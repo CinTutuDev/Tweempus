@@ -1,0 +1,25 @@
+@use "/src/styles.scss";
+
+.tranlator {
+  font-weight: bold;
+  color: styles.$text-primary-100;
+  border: none;
+  background-color: styles.$bg-color;
+  text-decoration: none;
+  cursor: pointer;
+  .nav_list_link{
+    text-decoration: none;
+    color: styles.$text-primary-100;
+  }
+
+  .language-menu{
+    .es:hover{
+      color:map-get(styles.$buttons, "bg-buttons");
+      font-size: 20px;
+    }
+    .en:hover{
+      color:map-get(styles.$buttons, "bg-buttons");
+      font-size: 20px;
+    }
+  }
+}

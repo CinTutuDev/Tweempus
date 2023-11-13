@@ -5,7 +5,7 @@
       [formGroup]="newTwimpForm"
       (ngSubmit)="createTwimp(newTwimpForm)"
     >
-      <label><h3 class="create_twimp_label">Crea tu twimp:</h3></label>
+      <label><h3 class="create_twimp_label">{{"CreateYourTwimp" | transloco}}:</h3></label>
       <div
         class="create_twimp_error"
         *ngIf="
@@ -13,7 +13,7 @@
           !newTwimpForm.get('content')!.pristine
         "
       >
-        Un Twimp tiene que contener algún texto
+      {{"Errors.NoText" | transloco}}
       </div>
       <div
         class="create_twimp_error"
@@ -22,11 +22,11 @@
           !newTwimpForm.get('content')!.pristine
         "
       >
-        Un Twimp sólo puede contener 300 letras como máximo
+      {{"Errors.CharacterLength" | transloco}}
       </div>
       <textarea
         class="create_twimp_textarea"
-        placeholder="Máximo 300 caracteres"
+        [placeholder]="'Errors.Textarea' | transloco"
         formControlName="content"
       ></textarea>
       <button
@@ -34,7 +34,7 @@
         class="create_twimp_button"
         [disabled]="newTwimpForm.invalid"
       >
-        Publicar
+        {{"Post" | transloco}}
       </button>
     </form>
   </div>

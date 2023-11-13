@@ -3,6 +3,7 @@
 .section-header {
   width: 100%;
   background: styles.$bg-color;
+  position: relative; // Agrega posición relativa para que los elementos absolutos se posicionen en relación con este contenedor
 
   .header_title {
     margin: 0;
@@ -16,11 +17,21 @@
 
   .header_auth {
     position: absolute;
-    top: 13px;
+    top: 25px;
     right: 15px;
     font-weight: bold;
     color: styles.$text-primary-100;
     border: none;
     background-color: styles.$bg-color;
   }
+
+  .header_translator {
+    // Alinea verticalmente con los botones
+
+    position: absolute;
+    top: 25px; // Ajusta según sea necesario
+/*     transform: translateY(-50%); */
+    right: 200px; // Ajusta según sea necesario
+  }
+
 }
