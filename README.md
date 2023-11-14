@@ -20,6 +20,7 @@
 ### Flexbox  👉 : [Conceptos básicos](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
 ### HostListener  👉 : [HostListener](https://angular.io/api/core/HostListener)
 ### npmjs 👉 : [Migrar de css a scss](https://www.npmjs.com/package/schematics-scss-migrate)
+### Transloco : [Traduciones](https://github.com/ngneat/transloco/tree/master)
 
 ## 🎮Comando de Instalación
 * Crear proyecto con prefijo para especificar todos los componentes:
@@ -102,6 +103,8 @@ Durante el curso de Angular16, he profundizado en los conceptos clave de enlace 
 ### @Input y @Output
 - Utilicé decoradores como `@Input` para recibir datos en un componente desde su componente padre.
 - Implementé `@Output` para emitir eventos desde un componente hijo y capturarlos en el componente padre.
+
+Además, he incorporado Transloco para la internacionalización de la aplicación, permitiéndome gestionar las traducciones de manera eficiente. Esta herramienta me ha brindado la flexibilidad necesaria para adaptar fácilmente la interfaz de usuario a diferentes idiomas, mejorando así la accesibilidad y la experiencia del usuario en todo el mundo.
 
 Estas prácticas adicionales han fortalecido mi comprensión de los fundamentos de Angular y me han proporcionado la capacidad de diseñar aplicaciones más interactivas y dinámicas.
 
