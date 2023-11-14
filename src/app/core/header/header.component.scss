@@ -3,7 +3,7 @@
 .section-header {
   width: 100%;
   background: styles.$bg-color;
-  position: relative; // Agrega posición relativa para que los elementos absolutos se posicionen en relación con este contenedor
+  position: relative;
 
   .header_title {
     margin: 0;
@@ -26,12 +26,8 @@
   }
 
   .header_translator {
-    // Alinea verticalmente con los botones
-
     position: absolute;
-    top: 25px; // Ajusta según sea necesario
-/*     transform: translateY(-50%); */
-    right: 200px; // Ajusta según sea necesario
+    top: 25px;
+    right: 200px;
   }
-
 }
